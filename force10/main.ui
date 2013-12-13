@@ -1,0 +1,123 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="maximumSize" >
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle" >
+   <string>Force 10 DB</string>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <layout class="QHBoxLayout" name="horizontalLayout_3" >
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout" >
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2" >
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout" >
+          <item>
+           <widget class="QLabel" name="label" >
+            <property name="text" >
+             <string>Component:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox" />
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer" >
+          <property name="orientation" >
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0" >
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2" >
+          <property name="text" >
+           <string>Description:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit" />
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableWidget" />
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOpen" >
+    <property name="title" >
+     <string>Open</string>
+    </property>
+    <addaction name="actionConnection" />
+   </widget>
+   <widget class="QMenu" name="menuInsert" >
+    <property name="title" >
+     <string>Insert</string>
+    </property>
+    <addaction name="actionInsert_Product" />
+    <addaction name="actionInsert_Object" />
+    <addaction name="actionInsert_Problem" />
+   </widget>
+   <addaction name="menuOpen" />
+   <addaction name="menuInsert" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <action name="actionConnection" >
+   <property name="text" >
+    <string>Connection</string>
+   </property>
+  </action>
+  <action name="actionInsert_Product" >
+   <property name="text" >
+    <string>Insert Product</string>
+   </property>
+  </action>
+  <action name="actionInsert_Object" >
+   <property name="text" >
+    <string>Insert Object</string>
+   </property>
+  </action>
+  <action name="actionInsert_Problem" >
+   <property name="text" >
+    <string>Insert Problem</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

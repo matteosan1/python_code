@@ -1,0 +1,673 @@
+<ui version="4.0" >
+ <class>RegolamentoDialog</class>
+ <widget class="QDialog" name="RegolamentoDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>624</width>
+    <height>455</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Regolamento</string>
+  </property>
+  <layout class="QVBoxLayout" >
+   <item>
+    <widget class="QTabWidget" name="tabGiocatori" >
+     <property name="currentIndex" >
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="tab_6" >
+      <attribute name="title" >
+       <string>Giocatori</string>
+      </attribute>
+      <layout class="QVBoxLayout" >
+       <item>
+        <layout class="QVBoxLayout" >
+         <item>
+          <layout class="QHBoxLayout" >
+           <item>
+            <widget class="QTableView" name="tableView" >
+             <property name="editTriggers" >
+              <set>QAbstractItemView::AnyKeyPressed</set>
+             </property>
+             <property name="cornerButtonEnabled" >
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" >
+             <item>
+              <widget class="QPushButton" name="pushButton" >
+               <property name="text" >
+                <string>Nuovo</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_2" >
+               <property name="text" >
+                <string>Rimuovi</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer>
+               <property name="orientation" >
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" >
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_4" >
+      <attribute name="title" >
+       <string>Punteggi</string>
+      </attribute>
+      <widget class="QWidget" name="layoutWidget" >
+       <property name="geometry" >
+        <rect>
+         <x>130</x>
+         <y>30</y>
+         <width>171</width>
+         <height>297</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" >
+        <item>
+         <layout class="QVBoxLayout" >
+          <item>
+           <widget class="QLabel" name="label_11" >
+            <property name="text" >
+             <string>1 Goal</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_12" >
+            <property name="text" >
+             <string>2 Goal</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_13" >
+            <property name="text" >
+             <string>3 Goal</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_14" >
+            <property name="text" >
+             <string>4 Goal</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_15" >
+            <property name="text" >
+             <string>5 Goal</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_16" >
+            <property name="text" >
+             <string>6 Goal</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_10" >
+            <property name="text" >
+             <string>7 Goal</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_24" >
+            <property name="text" >
+             <string>8 Goal</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_25" >
+            <property name="text" >
+             <string>9 Goal</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_26" >
+            <property name="text" >
+             <string>10 Goal</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" >
+          <item>
+           <widget class="QSpinBox" name="spinBox_7" >
+            <property name="value" >
+             <number>66</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_8" >
+            <property name="value" >
+             <number>72</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_9" >
+            <property name="value" >
+             <number>78</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_10" >
+            <property name="value" >
+             <number>84</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_11" >
+            <property name="value" >
+             <number>90</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_12" >
+            <property name="value" >
+             <number>96</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_20" >
+            <property name="maximum" >
+             <number>120</number>
+            </property>
+            <property name="value" >
+             <number>102</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_21" >
+            <property name="maximum" >
+             <number>120</number>
+            </property>
+            <property name="value" >
+             <number>108</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_22" >
+            <property name="maximum" >
+             <number>120</number>
+            </property>
+            <property name="value" >
+             <number>114</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_6" >
+            <property name="maximum" >
+             <number>130</number>
+            </property>
+            <property name="value" >
+             <number>120</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab" >
+      <attribute name="title" >
+       <string>Schemi</string>
+      </attribute>
+      <widget class="QLabel" name="label_27" >
+       <property name="geometry" >
+        <rect>
+         <x>40</x>
+         <y>150</y>
+         <width>159</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text" >
+        <string>Schemi di gioco consentiti</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget" >
+       <property name="geometry" >
+        <rect>
+         <x>240</x>
+         <y>40</y>
+         <width>111</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" >
+        <item>
+         <widget class="QCheckBox" name="checkBox_10" >
+          <property name="text" >
+           <string>6-3-1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_2" >
+          <property name="text" >
+           <string>5-4-1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_3" >
+          <property name="text" >
+           <string>5-3-2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_4" >
+          <property name="text" >
+           <string>4-5-1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_5" >
+          <property name="text" >
+           <string>4-4-2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_6" >
+          <property name="text" >
+           <string>4-3-3</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_7" >
+          <property name="text" >
+           <string>3-6-1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_11" >
+          <property name="text" >
+           <string>3-5-2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_8" >
+          <property name="text" >
+           <string>3-4-3</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_5" >
+      <attribute name="title" >
+       <string>Punteggi Giocatori</string>
+      </attribute>
+      <widget class="QWidget" name="layoutWidget" >
+       <property name="geometry" >
+        <rect>
+         <x>290</x>
+         <y>50</y>
+         <width>191</width>
+         <height>72</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" >
+        <item>
+         <widget class="QCheckBox" name="checkBox_9" >
+          <property name="text" >
+           <string>6 politico a s.v.</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_13" >
+          <property name="text" >
+           <string>sost. "automatica" portiere</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_12" >
+          <property name="text" >
+           <string>Portiere s.v. = 6</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget" >
+       <property name="geometry" >
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>211</width>
+         <height>331</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" >
+        <item row="0" column="0" >
+         <widget class="QLabel" name="label_23" >
+          <property name="text" >
+           <string>Goal Subito</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" >
+         <widget class="QSpinBox" name="spinBox_19" >
+          <property name="minimum" >
+           <number>-10</number>
+          </property>
+          <property name="value" >
+           <number>-1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" >
+         <widget class="QLabel" name="label_17" >
+          <property name="text" >
+           <string>Rigore Parato</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" >
+         <widget class="QSpinBox" name="spinBox_13" >
+          <property name="value" >
+           <number>3</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" >
+         <widget class="QLabel" name="label_18" >
+          <property name="text" >
+           <string>Rigore Sbagliato</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" >
+         <widget class="QSpinBox" name="spinBox_14" >
+          <property name="minimum" >
+           <number>-10</number>
+          </property>
+          <property name="value" >
+           <number>-3</number>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" >
+         <widget class="QLabel" name="label_19" >
+          <property name="text" >
+           <string>Goal Segnato</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1" >
+         <widget class="QSpinBox" name="spinBox_15" >
+          <property name="value" >
+           <number>3</number>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" >
+         <widget class="QLabel" name="label_20" >
+          <property name="text" >
+           <string>Assist</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1" >
+         <widget class="QSpinBox" name="spinBox_16" >
+          <property name="value" >
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0" >
+         <widget class="QLabel" name="label_21" >
+          <property name="text" >
+           <string>Ammonizione</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1" >
+         <widget class="QSpinBox" name="spinBox_17" >
+          <property name="suffix" >
+           <string> * 0.5</string>
+          </property>
+          <property name="minimum" >
+           <number>-10</number>
+          </property>
+          <property name="singleStep" >
+           <number>1</number>
+          </property>
+          <property name="value" >
+           <number>-1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0" >
+         <widget class="QLabel" name="label_22" >
+          <property name="text" >
+           <string>Espulsione</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1" >
+         <widget class="QSpinBox" name="spinBox_18" >
+          <property name="minimum" >
+           <number>-10</number>
+          </property>
+          <property name="value" >
+           <number>-1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0" >
+         <widget class="QLabel" name="label_28" >
+          <property name="text" >
+           <string>Rigore Segnato</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1" >
+         <widget class="QSpinBox" name="spinBox_23" >
+          <property name="value" >
+           <number>3</number>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0" >
+         <widget class="QLabel" name="label_29" >
+          <property name="text" >
+           <string>Autogoal</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1" >
+         <widget class="QSpinBox" name="spinBox_24" >
+          <property name="minimum" >
+           <number>-10</number>
+          </property>
+          <property name="value" >
+           <number>-2</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_2" >
+      <attribute name="title" >
+       <string>Vantaggi</string>
+      </attribute>
+      <widget class="QSpinBox" name="spinBox_5" >
+       <property name="geometry" >
+        <rect>
+         <x>130</x>
+         <y>30</y>
+         <width>50</width>
+         <height>23</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5" >
+       <property name="geometry" >
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>107</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text" >
+        <string>Fattore campo</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6" >
+       <property name="geometry" >
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>56</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text" >
+        <string>TextLabel</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7" >
+       <property name="geometry" >
+        <rect>
+         <x>10</x>
+         <y>120</y>
+         <width>56</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text" >
+        <string>TextLabel</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8" >
+       <property name="geometry" >
+        <rect>
+         <x>10</x>
+         <y>150</y>
+         <width>56</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text" >
+        <string>TextLabel</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9" >
+       <property name="geometry" >
+        <rect>
+         <x>10</x>
+         <y>190</y>
+         <width>56</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text" >
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::NoButton|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>RegolamentoDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>RegolamentoDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

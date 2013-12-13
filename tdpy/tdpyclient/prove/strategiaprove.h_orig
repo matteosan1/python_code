@@ -1,0 +1,27 @@
+#ifndef STRATEGIAPROVE_H
+#define STRATEGIAPROVE_H
+
+#include <windows.h>
+#include <string>
+
+using namespace std;
+
+class StrategiaProve {
+    public:
+        StrategiaProve(int i, int* s, string* con);
+        virtual ~StrategiaProve();
+        int* getStrategia() { return strategia; };
+
+        void InitDlg();
+        void OnExit();
+
+        BOOL CALLBACK DlgProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam);
+        HWND hwndCtl;
+
+    private:
+        int chi;
+        int strategia[6];
+        string contrade[10];
+};
+
+#endif

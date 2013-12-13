@@ -1,0 +1,697 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>835</width>
+    <height>643</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset>
+    <normaloff>../../splashscreen/tdp.png</normaloff>../../splashscreen/tdp.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <layout class="QVBoxLayout" >
+    <item>
+     <widget class="QFrame" name="frame" >
+      <property name="frameShape" >
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow" >
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTableWidget" name="tableWidget_contrade" >
+       <property name="geometry" >
+        <rect>
+         <x>540</x>
+         <y>261</y>
+         <width>261</width>
+         <height>238</height>
+        </rect>
+       </property>
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize" >
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize" >
+        <size>
+         <width>16777215</width>
+         <height>238</height>
+        </size>
+       </property>
+       <property name="font" >
+        <font>
+         <pointsize>6</pointsize>
+        </font>
+       </property>
+       <property name="focusPolicy" >
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="autoScroll" >
+        <bool>false</bool>
+       </property>
+       <property name="selectionMode" >
+        <enum>QAbstractItemView::NoSelection</enum>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="showGrid" >
+        <bool>true</bool>
+       </property>
+       <property name="gridStyle" >
+        <enum>Qt::SolidLine</enum>
+       </property>
+       <property name="wordWrap" >
+        <bool>false</bool>
+       </property>
+       <property name="cornerButtonEnabled" >
+        <bool>false</bool>
+       </property>
+       <property name="rowCount" >
+        <number>10</number>
+       </property>
+       <row>
+        <property name="text" >
+         <string>New Row</string>
+        </property>
+       </row>
+       <row>
+        <property name="text" >
+         <string>New Row</string>
+        </property>
+       </row>
+       <row>
+        <property name="text" >
+         <string>New Row</string>
+        </property>
+       </row>
+       <row>
+        <property name="text" >
+         <string>New Row</string>
+        </property>
+       </row>
+       <row>
+        <property name="text" >
+         <string>New Row</string>
+        </property>
+       </row>
+       <row>
+        <property name="text" >
+         <string>New Row</string>
+        </property>
+       </row>
+       <row>
+        <property name="text" >
+         <string>New Row</string>
+        </property>
+       </row>
+       <row>
+        <property name="text" >
+         <string>New Row</string>
+        </property>
+       </row>
+       <row>
+        <property name="text" >
+         <string>New Row</string>
+        </property>
+       </row>
+       <row/>
+       <column>
+        <property name="text" >
+         <string>New Column</string>
+        </property>
+       </column>
+       <column>
+        <property name="text" >
+         <string>New Column</string>
+        </property>
+       </column>
+       <column>
+        <property name="text" >
+         <string>New Column</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QGraphicsView" name="graphicsView" >
+       <property name="enabled" >
+        <bool>false</bool>
+       </property>
+       <property name="geometry" >
+        <rect>
+         <x>8</x>
+         <y>8</y>
+         <width>501</width>
+         <height>483</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="chatEdit" >
+       <property name="enabled" >
+        <bool>true</bool>
+       </property>
+       <property name="geometry" >
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>241</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShadow" >
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="verticalScrollBarPolicy" >
+        <enum>Qt::ScrollBarAsNeeded</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy" >
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="readOnly" >
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget_Panel" >
+       <property name="geometry" >
+        <rect>
+         <x>550</x>
+         <y>10</y>
+         <width>251</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="currentIndex" >
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab" >
+        <attribute name="title" >
+         <string>Contrada</string>
+        </attribute>
+        <widget class="QWidget" name="layoutWidget" >
+         <property name="geometry" >
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>217</width>
+           <height>94</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout" >
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout" >
+            <item>
+             <widget class="QLabel" name="label_pngContrada" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize" >
+               <size>
+                <width>50</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize" >
+               <size>
+                <width>50</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="text" >
+               <string>Pic</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_nomeContrada" >
+              <property name="sizePolicy" >
+               <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font" >
+               <font>
+                <pointsize>6</pointsize>
+               </font>
+              </property>
+              <property name="text" >
+               <string>Imperiale Contrada della Giraffa</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_carica" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font" >
+             <font>
+              <pointsize>6</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Mandato:3</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_gradimento" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font" >
+             <font>
+              <pointsize>6</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Gradimento: 100%</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_2" >
+        <attribute name="title" >
+         <string>Fantino</string>
+        </attribute>
+        <widget class="QWidget" name="layoutWidget" >
+         <property name="geometry" >
+          <rect>
+           <x>30</x>
+           <y>20</y>
+           <width>96</width>
+           <height>58</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3" >
+          <item>
+           <widget class="QLabel" name="label_fantino" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font" >
+             <font>
+              <pointsize>6</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Fantino: Gazzelloro</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_fantinoCorsi" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font" >
+             <font>
+              <pointsize>6</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Corsi: 40</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_fantinoVinti" >
+            <property name="sizePolicy" >
+             <sizepolicy vsizetype="Fixed" hsizetype="Maximum" >
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font" >
+             <font>
+              <pointsize>6</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Vinti: 10</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_3" >
+        <attribute name="title" >
+         <string>Cavallo</string>
+        </attribute>
+        <widget class="QWidget" name="layoutWidget" >
+         <property name="geometry" >
+          <rect>
+           <x>30</x>
+           <y>30</y>
+           <width>179</width>
+           <height>87</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2" >
+          <item>
+           <widget class="QLabel" name="label_cavallo" >
+            <property name="font" >
+             <font>
+              <pointsize>6</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Cavallo: Saltalamacchia</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_cavalloCorsi" >
+            <property name="font" >
+             <font>
+              <pointsize>6</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Corsi: 40</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_cavalloVinti" >
+            <property name="font" >
+             <font>
+              <pointsize>6</pointsize>
+             </font>
+            </property>
+            <property name="text" >
+             <string>Vinti: 20</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2" >
+            <item>
+             <spacer name="horizontalSpacer" >
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QProgressBar" name="progressBar_forma" >
+              <property name="font" >
+               <font>
+                <pointsize>6</pointsize>
+               </font>
+              </property>
+              <property name="value" >
+               <number>24</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2" >
+              <property name="orientation" >
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0" >
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_chat" >
+       <property name="enabled" >
+        <bool>true</bool>
+       </property>
+       <property name="geometry" >
+        <rect>
+         <x>100</x>
+         <y>410</y>
+         <width>331</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="sizePolicy" >
+        <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>835</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile" >
+    <property name="title" >
+     <string>File</string>
+    </property>
+    <addaction name="actionNew" />
+    <addaction name="actionOpen" />
+    <addaction name="actionSave" />
+    <addaction name="actionSave_As" />
+    <addaction name="actionPrint" />
+    <addaction name="actionExit" />
+   </widget>
+   <widget class="QMenu" name="menuInserisci" >
+    <property name="title" >
+     <string>Inserisci</string>
+    </property>
+    <addaction name="actionInserisci_Giocatore" />
+   </widget>
+   <widget class="QMenu" name="menuOpzioni" >
+    <property name="title" >
+     <string>Opzioni</string>
+    </property>
+    <addaction name="actionEffetti_sonori" />
+   </widget>
+   <widget class="QMenu" name="menuServer" >
+    <property name="title" >
+     <string>Server</string>
+    </property>
+    <addaction name="actionAvvia_gioco" />
+    <addaction name="actionScegli_Contrada" />
+    <addaction name="actionSpettatore" />
+   </widget>
+   <widget class="QMenu" name="menuTabelle" >
+    <property name="title" >
+     <string>Tabelle</string>
+    </property>
+    <addaction name="actionContrada" />
+    <addaction name="actionVittorie" />
+    <addaction name="actionCuffia" />
+    <addaction name="actionFantini" />
+    <addaction name="actionCavalli" />
+   </widget>
+   <addaction name="menuFile" />
+   <addaction name="menuInserisci" />
+   <addaction name="menuOpzioni" />
+   <addaction name="menuServer" />
+   <addaction name="menuTabelle" />
+  </widget>
+  <widget class="QToolBar" name="toolBar" >
+   <property name="windowTitle" >
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea" >
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak" >
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew" />
+   <addaction name="actionAvanti" />
+   <addaction name="separator" />
+   <addaction name="actionConnessione" />
+   <addaction name="actionAvvia_gioco" />
+   <addaction name="separator" />
+   <addaction name="actionExit" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <action name="actionNew" >
+   <property name="icon" >
+    <iconset resource="resource.qrc" >
+     <normaloff>:/icons/pictures/filenew.png</normaloff>:/icons/pictures/filenew.png</iconset>
+   </property>
+   <property name="text" >
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionOpen" >
+   <property name="text" >
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave" >
+   <property name="text" >
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_As" >
+   <property name="text" >
+    <string>Save As</string>
+   </property>
+  </action>
+  <action name="actionPrint" >
+   <property name="text" >
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="actionExit" >
+   <property name="text" >
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionInserisci_Giocatore" >
+   <property name="text" >
+    <string>Giocatore</string>
+   </property>
+  </action>
+  <action name="actionEffetti_sonori" >
+   <property name="checkable" >
+    <bool>true</bool>
+   </property>
+   <property name="checked" >
+    <bool>true</bool>
+   </property>
+   <property name="text" >
+    <string>Effetti sonori</string>
+   </property>
+  </action>
+  <action name="actionAvanti" >
+   <property name="icon" >
+    <iconset resource="resource.qrc" >
+     <normaloff>:/icons/pictures/avanti.png</normaloff>:/icons/pictures/avanti.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Avanti</string>
+   </property>
+  </action>
+  <action name="actionConnessione" >
+   <property name="icon" >
+    <iconset resource="resource.qrc" >
+     <normaloff>:/icons/pictures/connect_no.png</normaloff>:/icons/pictures/connect_no.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Connessione</string>
+   </property>
+  </action>
+  <action name="actionAvvia_gioco" >
+   <property name="icon" >
+    <iconset resource="resource.qrc" >
+     <normaloff>:/icons/pictures/history.png</normaloff>:/icons/pictures/history.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Avvia gioco</string>
+   </property>
+  </action>
+  <action name="actionScegli_Contrada" >
+   <property name="text" >
+    <string>Scegli Contrada</string>
+   </property>
+  </action>
+  <action name="actionSpettatore" >
+   <property name="text" >
+    <string>Spettatore</string>
+   </property>
+  </action>
+  <action name="actionContrada" >
+   <property name="text" >
+    <string>Contrada</string>
+   </property>
+  </action>
+  <action name="actionVittorie" >
+   <property name="text" >
+    <string>Vittorie</string>
+   </property>
+  </action>
+  <action name="actionCuffia" >
+   <property name="text" >
+    <string>Cuffia</string>
+   </property>
+  </action>
+  <action name="actionFantini" >
+   <property name="text" >
+    <string>Fantini</string>
+   </property>
+  </action>
+  <action name="actionCavalli" >
+   <property name="text" >
+    <string>Cavalli</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resource.qrc" />
+ </resources>
+ <connections/>
+</ui>

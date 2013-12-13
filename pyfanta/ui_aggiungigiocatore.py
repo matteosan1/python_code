@@ -1,0 +1,91 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'newplayer.ui'
+#
+# Created: Tue Jan 18 19:57:15 2011
+#      by: PyQt4 UI code generator 4.7.4
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+class Ui_NewPlayer(object):
+    def setupUi(self, NewPlayer):
+        NewPlayer.setObjectName("NewPlayer")
+        NewPlayer.resize(400, 476)
+        self.buttonBox = QtGui.QDialogButtonBox(NewPlayer)
+        self.buttonBox.setGeometry(QtCore.QRect(40, 430, 341, 32))
+        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
+        self.buttonBox.setObjectName("buttonBox")
+        self.label = QtGui.QLabel(NewPlayer)
+        self.label.setGeometry(QtCore.QRect(40, 30, 71, 18))
+        self.label.setObjectName("label")
+        self.label_2 = QtGui.QLabel(NewPlayer)
+        self.label_2.setGeometry(QtCore.QRect(40, 70, 56, 18))
+        self.label_2.setObjectName("label_2")
+        self.lineEdit = QtGui.QLineEdit(NewPlayer)
+        self.lineEdit.setGeometry(QtCore.QRect(120, 30, 113, 23))
+        self.lineEdit.setObjectName("lineEdit")
+        self.lineEdit_2 = QtGui.QLineEdit(NewPlayer)
+        self.lineEdit_2.setGeometry(QtCore.QRect(120, 70, 113, 23))
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.groupBox = QtGui.QGroupBox(NewPlayer)
+        self.groupBox.setGeometry(QtCore.QRect(110, 120, 141, 151))
+        self.groupBox.setObjectName("groupBox")
+        self.layoutWidget = QtGui.QWidget(self.groupBox)
+        self.layoutWidget.setGeometry(QtCore.QRect(10, 30, 138, 98))
+        self.layoutWidget.setObjectName("layoutWidget")
+        self.vboxlayout = QtGui.QVBoxLayout(self.layoutWidget)
+        self.vboxlayout.setObjectName("vboxlayout")
+        self.radioButton = QtGui.QRadioButton(self.layoutWidget)
+        self.radioButton.setObjectName("radioButton")
+        self.vboxlayout.addWidget(self.radioButton)
+        self.radioButton_2 = QtGui.QRadioButton(self.layoutWidget)
+        self.radioButton_2.setObjectName("radioButton_2")
+        self.vboxlayout.addWidget(self.radioButton_2)
+        self.radioButton_3 = QtGui.QRadioButton(self.layoutWidget)
+        self.radioButton_3.setObjectName("radioButton_3")
+        self.vboxlayout.addWidget(self.radioButton_3)
+        self.radioButton_4 = QtGui.QRadioButton(self.layoutWidget)
+        self.radioButton_4.setObjectName("radioButton_4")
+        self.vboxlayout.addWidget(self.radioButton_4)
+        self.lineEdit_3 = QtGui.QLineEdit(NewPlayer)
+        self.lineEdit_3.setGeometry(QtCore.QRect(130, 350, 113, 23))
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.label_3 = QtGui.QLabel(NewPlayer)
+        self.label_3.setGeometry(QtCore.QRect(50, 310, 56, 18))
+        self.label_3.setObjectName("label_3")
+        self.lineEdit_4 = QtGui.QLineEdit(NewPlayer)
+        self.lineEdit_4.setGeometry(QtCore.QRect(130, 310, 113, 23))
+        self.lineEdit_4.setInputMask("")
+        self.lineEdit_4.setObjectName("lineEdit_4")
+        self.label_4 = QtGui.QLabel(NewPlayer)
+        self.label_4.setGeometry(QtCore.QRect(50, 350, 56, 18))
+        self.label_4.setObjectName("label_4")
+
+        self.retranslateUi(NewPlayer)
+        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL("accepted()"), NewPlayer.accept)
+        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL("rejected()"), NewPlayer.reject)
+        QtCore.QMetaObject.connectSlotsByName(NewPlayer)
+        NewPlayer.setTabOrder(self.lineEdit, self.lineEdit_2)
+        NewPlayer.setTabOrder(self.lineEdit_2, self.radioButton)
+        NewPlayer.setTabOrder(self.radioButton, self.radioButton_2)
+        NewPlayer.setTabOrder(self.radioButton_2, self.radioButton_3)
+        NewPlayer.setTabOrder(self.radioButton_3, self.radioButton_4)
+        NewPlayer.setTabOrder(self.radioButton_4, self.lineEdit_4)
+        NewPlayer.setTabOrder(self.lineEdit_4, self.lineEdit_3)
+        NewPlayer.setTabOrder(self.lineEdit_3, self.buttonBox)
+
+    def retranslateUi(self, NewPlayer):
+        NewPlayer.setWindowTitle(QtGui.QApplication.translate("NewPlayer", "Nuovo Giocatore", None, QtGui.QApplication.UnicodeUTF8))
+        self.label.setText(QtGui.QApplication.translate("NewPlayer", "Cognome", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_2.setText(QtGui.QApplication.translate("NewPlayer", "Nome", None, QtGui.QApplication.UnicodeUTF8))
+        self.groupBox.setTitle(QtGui.QApplication.translate("NewPlayer", "Ruolo", None, QtGui.QApplication.UnicodeUTF8))
+        self.radioButton.setText(QtGui.QApplication.translate("NewPlayer", "Portiere", None, QtGui.QApplication.UnicodeUTF8))
+        self.radioButton_2.setText(QtGui.QApplication.translate("NewPlayer", "Difensore", None, QtGui.QApplication.UnicodeUTF8))
+        self.radioButton_3.setText(QtGui.QApplication.translate("NewPlayer", "Centrocampista", None, QtGui.QApplication.UnicodeUTF8))
+        self.radioButton_4.setText(QtGui.QApplication.translate("NewPlayer", "Attaccante", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_3.setText(QtGui.QApplication.translate("NewPlayer", "Squadra", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_4.setText(QtGui.QApplication.translate("NewPlayer", "Prezzo", None, QtGui.QApplication.UnicodeUTF8))
+

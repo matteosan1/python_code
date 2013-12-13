@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fanta</class>
+ <widget class="QMainWindow" name="fanta">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Fantamanager</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>fanta.png</normaloff>fanta.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout">
+    <item>
+     <layout class="QHBoxLayout">
+      <item>
+       <widget class="QTableView" name="tableGiocatori">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionChiudi"/>
+   </widget>
+   <widget class="QMenu" name="menuModifica">
+    <property name="title">
+     <string>Modifica</string>
+    </property>
+    <addaction name="actionNuovo_giocatore"/>
+    <addaction name="actionModifica_Giocatore"/>
+    <addaction name="actionElimina_Giocatore"/>
+    <addaction name="actionAggiorna_Giocatore"/>
+   </widget>
+   <widget class="QMenu" name="menuGestione">
+    <property name="title">
+     <string>Gestione</string>
+    </property>
+    <addaction name="actionFormazione"/>
+    <addaction name="actionMedie_Giocatori"/>
+    <addaction name="actionFormazione_tipo"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuModifica"/>
+   <addaction name="menuGestione"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolTip">
+    <string>Nuova Formazione</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionNuovo_giocatore"/>
+   <addaction name="actionModifica_Giocatore"/>
+   <addaction name="actionElimina_Giocatore"/>
+   <addaction name="separator"/>
+   <addaction name="actionFormazione"/>
+   <addaction name="actionMedie_Giocatori"/>
+   <addaction name="actionFormazione_tipo"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/images/folder_orange_open.png</normaloff>:/icons/images/folder_orange_open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Apri</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/images/filesave.png</normaloff>:/icons/images/filesave.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salva</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/images/filenew.png</normaloff>:/icons/images/filenew.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nuovo</string>
+   </property>
+  </action>
+  <action name="actionChiudi">
+   <property name="text">
+    <string>Chiudi</string>
+   </property>
+  </action>
+  <action name="actionNuovo_giocatore">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/add_user.png</normaloff>images/add_user.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nuovo Giocatore</string>
+   </property>
+  </action>
+  <action name="actionModifica_Giocatore">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/images/edit_user.png</normaloff>:/icons/images/edit_user.png</iconset>
+   </property>
+   <property name="text">
+    <string>Modifica Giocatore</string>
+   </property>
+  </action>
+  <action name="actionElimina_Giocatore">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/images/delete_user.png</normaloff>:/icons/images/delete_user.png</iconset>
+   </property>
+   <property name="text">
+    <string>Elimina Giocatore</string>
+   </property>
+  </action>
+  <action name="actionFormazione">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/images/pencil.png</normaloff>:/icons/images/pencil.png</iconset>
+   </property>
+   <property name="text">
+    <string>Formazione</string>
+   </property>
+  </action>
+  <action name="actionInserisci_Voti">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/images/math_sum.png</normaloff>:/icons/images/math_sum.png</iconset>
+   </property>
+   <property name="text">
+    <string>Inserisci Voti</string>
+   </property>
+  </action>
+  <action name="actionProfilo_Squadra">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/images/contents2.png</normaloff>:/icons/images/contents2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Profilo Squadra</string>
+   </property>
+  </action>
+  <action name="actionMedie_Giocatori">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/images/frac.png</normaloff>:/icons/images/frac.png</iconset>
+   </property>
+   <property name="text">
+    <string>Medie Giocatori</string>
+   </property>
+  </action>
+  <action name="actionFormazione_tipo">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icons/images/package_edutainment.png</normaloff>:/icons/images/package_edutainment.png</iconset>
+   </property>
+   <property name="text">
+    <string>Formazione tipo</string>
+   </property>
+  </action>
+  <action name="actionAggiorna_Giocatore">
+   <property name="text">
+    <string>Aggiorna Giocatore</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

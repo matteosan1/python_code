@@ -1,0 +1,432 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" xmlns:fb="http://www.facebook.com/2008/fbml">
+    <head>
+        <title>Why Should I sign Up? - SchoolFinder</title>
+
+        <!-- Meta Content-Type Section -->
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+        <!-- <meta http-equiv="content-type" content="application/xhtml+xml; charset=iso-8859-1" /> -->
+        <meta http-equiv="content-language" content="en" />
+
+    <link rel="canonical" href="http://www.schoolfinder.com/index.asp" />
+
+        <!-- Meta Page Info Section -->
+        <meta name="copyright" content="1995-2009 EDge Interactive." />
+        <meta name="author" content="EDge Interactive" />
+        <meta name="revisit-after" content="2 weeks" />
+        <meta name="distribution" content="global" />
+        <meta name="rating" content="general" />
+        <meta name="robots" content="all" />
+
+        <!-- Page Description and Keywords Section -->
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        
+        <!-- Open Graph Source -->
+		<meta property="og:title" content="Why Should I sign Up?"/>
+		<meta property="og:type" content="school"/>
+		<meta property="og:url" content=""/>
+		<meta property="og:image" content="http://www.SchoolFinder.com/img/icon.png"/>
+		<meta property="og:site_name" content="SchoolFinder.com"/>
+		<meta property="og:description" content="Find schools on SchoolFinder.com."/>
+		<!-- Facebook Admin Users -->
+		<meta property="fb:admins" content="726085139,516191963"/>
+		<!-- /Open Graph Source -->
+
+        <!-- Correct Unsightly Flash of Unstyled Content in MSIE. http://www.bluerobot.com/web/css/fouc.asp -->
+        <script type="text/javascript"></script>
+
+        <!-- CSS Design Resource Section -->
+        <link rel="stylesheet" type="text/css" media="all" href="/include/css_core.css" />
+        <!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="/include/css_ie6.css" /><![endif]-->
+        <!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="/include/css_ie7.css" /><![endif]-->
+
+        <!-- Javascript Resource Section -->
+
+                <script type="text/javascript" src="http://www.schoolfinder.com/include/swfobject.js"></script>
+    <!-- Google API Section -->
+    
+
+        <script type="text/javascript" src="/js/mootools-1.2-core-nc.js"></script>
+        <script type="text/javascript" src="/js/mootools-1.2-more-nc.js"></script>
+        <script type="text/javascript" src="/js/schoolfinder.js"></script>
+        
+        <script type="text/javascript">
+            //<![CDATA[
+
+            var oSite = new SchoolFinder(
+            {
+                BasePath: '/',
+                GraphicsPath: 'graphics/',
+                
+                Cookie:
+                {
+                    domain:   'schoolfinder.com',
+                    path:     '/',
+                    duration: 14
+                },
+
+                onPageLoad: function()
+                {
+                    
+                            if( typeof loginerror == 'function' ) loginerror();
+                        
+
+                },
+                onPageUnload: function()
+                {
+                },
+                onPageReady: function()
+                {
+                }
+            });
+
+
+        
+
+            function MM_openBrWindow(theURL,winName,features) { //v2.0
+                window.open(theURL,winName,features);
+            }
+            function open_popupW(fname) {
+                window.open(fname,"program","width=520,height=520,toolbar=no,scrollbars=yes,left=0,top=0")
+            }
+            function open_popupW1(fname) {
+                window.open(fname,"","width=440,height=420,location=no,menubar=no,status=no,toolbar=no,scrollbars=yes,resizable=no,left=100,top=100")
+            }
+            function open_popupW2(fname) {
+                window.open(fname,"","width=600,height=400,location=yes,menubar=yes,status=yes,toolbar=yes,scrollbars=yes,resizable=yes,left=0,top=0")
+            }
+            function open_popupW3(fname) {
+                window.open(fname,"email","width=420,height=350,toolbar=no,scrollbars=yes,left=140,top=140")
+            }
+            function Popup(url,name) {
+                window.open(url,name,"width=375,height=375,location=0,menubar=0,status=0,toolbar=0,scrollbars=0,resizable=0,left=0,top=0,dependent=1")
+            }
+            function PopUpMsg(url) {
+                window.open("popup.asp?ProfileID="+url,"PopUpMsg","width=300,height=350,location=0,menubar=0,status=0,toolbar=0,scrollbars=1,resizable=0,left=0,top=0,dependent=1")
+            }
+
+
+            function login() {
+                var form=document.login11;
+                var s,i;
+                if (form.usr.value==""){
+                    alert("Please specify the username."); form.usr.focus(); return;}
+                for (i=0;i<form.usr.value.length;i++) {
+                    s=form.usr.value.substring(i,i+1);
+                    if (!((s>="a")&&(s<="z")) && !((s>="A")&&(s<="Z")) && !((s>="0")&&(s<="9")) && (s!="_") && (s!="@") && (s!=".") && (s!="-")) {
+                        alert("Please use only alpha - numeric characters for username.");  form.usr.focus(); return;       }
+                }
+                if (form.pwd.value==""){
+                    alert("Please specify the password."); form.pwd.focus(); return;}
+                for (i=0;i<form.pwd.value.length;i++) {
+                    s=form.pwd.value.substring(i,i+1);
+                    if (!((s>="a")&&(s<="z")) && !((s>="A")&&(s<="Z")) && !((s>="0")&&(s<="9")) && (s!="_") && (s!="@") && (s!=".") && (s!="-")) {
+                        alert("Please use only alpha - numeric characters for password.");  form.pwd.focus(); return;       }
+                }
+                form.submit();
+            }
+            
+            function Mes1() {
+                alert('You must be a member of the site to take the 3 Steps Career Quiz. Sign in with your existing username and password or click on "Create an Account" to register.');
+            }
+            function Mes() {
+                alert('You must be a member of the site to use the advanced search. Sign in with your existing username and password or click on "Create an Account" to register.');
+            }
+            function Mes2() {
+                alert("To use this feature and all the other great features on this site, please sign in or create an account. It's FREE! Go to the top right of the screen.");
+            }
+            function MesMyStuff() {
+                alert("You need to Sign in using your existing username and password or Sign up by clicking on “Create an Account to gain access to mySTUFF.");
+            }
+            
+            function loginerror() {
+                alert("Your username or password is incorrect. Please try again.");
+            }
+            
+
+        function QuickSearch()
+        {
+            var frm1=document.RightKeywordSearch;
+            if (frm1.rdoQuickSearchType[0].checked)
+            {
+                if (frm1.Keyword.value=="")
+                {
+                    alert("Please insert the keyword(s) for the school you want to search for.");
+                    frm1.Keyword.focus();
+                    return false;
+                }
+                frm1.action="../schools/keywordresults_all.asp";
+                frm1.submit();
+            }
+            else
+            {
+                if (frm1.Keyword.value=="")
+                {
+                    alert("Please insert the keyword(s) for the program you want to search for.");
+                    frm1.Keyword.focus();
+                    return false;
+                }
+                frm1.action="../schools/programresults_byschool_all.asp"
+                frm1.submit();
+            }
+            return false;
+        }
+
+
+    
+
+            //]]>
+        </script>
+
+        <!-- Page-Alternate Resource Section -->
+        <link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico" />
+
+    </head>
+
+    <body>
+
+    <a name="top"></a>
+        <!-- Page Wrapper and Container -->
+        <div id="Page-Wrapper">
+            <div id="Page-Container">
+
+                <!-- Page Header Block -->
+                <div id="Page-Header"><div class="LE"><div class="RE">
+
+
+			<p>Want access to free tools and advice? &nbsp; <a href="../reg/why.asp" title="Create an Account">Create an account</a> &nbsp;|&nbsp; <a href="../reg/why.asp" title="Sign In">Sign in</a></p>
+		
+
+                </div></div></div>
+                <!-- /End Page Header Block -->
+
+<!-- Begin check page Study Level -->
+            
+<!-- End check page Study Level -->
+
+                <!-- Page Banners Block -->
+                
+                	<div id="Page-BannerBlock"><script type="text/javascript" src="http://altfarm.mediaplex.com/ad/js/11996-133304-26419-1?mpt=[CACHEBUSTER]&mpvc=">
+</script>
+<noscript>
+  <a href="http://altfarm.mediaplex.com/ad/nc/11996-133304-26419-1?mpt=[CACHEBUSTER]">
+    <img src="http://altfarm.mediaplex.com/ad/nb/11996-133304-26419-1?mpt=[CACHEBUSTER]"
+alt="Click Here" border="0">
+</a>
+</noscript></div>
+                
+
+                <!-- /End Page Banners Block -->
+
+                <!-- Page Body Block -->
+                <div id="Page-Body">
+                    <div id="Page-Content">
+
+                        <div class="SubTabs-Container">
+
+                            <a href="javascript:void(0);" id="SubTabsDropMenuLink" title="Undergraduate" class="MainItem">Undergraduate</a>
+                            <!-- <a href="/schools/schoolindex.asp?from=schoolindex&StudyType=2&tabProfileType=" title="Undergraduate" class="MainItem">Undergraduate</a> -->
+
+                            <div class="SubTabs-TopMenu">
+                                <ul>
+                                    
+                                        <li><a href="../schools/index.asp" title="Schools"><span>Schools</span></a></li>
+                                        <li><a href="../finance/index.asp" title="Scholarships & Aid"><span>Scholarships & Aid</span></a></li>
+                                        <li><a href="../careers/index.asp" title="Careers"><span>Careers</span></a></li>
+                                        <!-- <li><a href="../events/index.asp" title="Events"><span>Events</span></a></li> -->
+                                        <li><a href="../news/index.asp" title="News"><span>News</span></a></li>
+                                        <li><a href="../video/index.asp" title="Videos"><span>Videos</span></a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SubTabs - Drop Menu -->
+                        <div id="SubTabsDropMenuDiv1" class="SubTabs-DropMenu-Opacity">&nbsp;</div>
+                        <div id="SubTabsDropMenuDiv2" class="SubTabs-DropMenu">
+                            <ul>
+                                <li><a href="/schools/index.asp?StudyType=1" title="Secondary" class="ParentItem">Secondary</a>
+                                    <ul>
+                                        <li><a href="/schools/schoolindex.asp?StudyType=1&tabProfileType=Public+Secondary+School&ProfileType=Public+Secondary+School" title="Public Secondary Schools">Public Schools</a></li>
+                                        <li><a href="/schools/schoolindex.asp?StudyType=1&tabProfileType=Private+Secondary+School&ProfileType=Private+Secondary+School" title="Private Secondary Schools">Private Schools</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><a href="/schools/index.asp?StudyType=2" title="Undergraduate" class="ParentItem">Undergraduate</a>
+                                    <ul>
+                                        <li><a href="/schools/schoolindex.asp?StudyType=2&tabProfileType=University&ProfileType=University" title="Universities">Universities</a></li>
+                                        <li><a href="/schools/schoolindex.asp?StudyType=2&tabProfileType=College&ProfileType=College" title="Colleges">Colleges</a></li>
+                                        <li><a href="/schools/schoolindex.asp?StudyType=2&tabProfileType=Career+College&ProfileType=Career+College" title="Career Colleges">Career Colleges</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><a href="/schools/index.asp?StudyType=3" title="Graduate" class="ParentItem">Graduate</a>
+                                    <ul>
+                                        <li><a href="/schools/schoolindex.asp?StudyType=3&tabProfileType=Other+Graduate&ProfileType=Other+Graduate" title="Graduate Schools">Graduate Schools</a></li>
+                                        <li><a href="/schools/schoolindex.asp?StudyType=3&tabProfileType=MBA&ProfileType=MBA" title="Business Schools">Business Schools</a></li>
+                                        <li><a href="/schools/schoolindex.asp?StudyType=3&tabProfileType=Medical&ProfileType=Medical" title="Medical Schools">Medical Schools</a></li>
+                                        <li><a href="/schools/schoolindex.asp?StudyType=3&tabProfileType=Dental&ProfileType=Dental" title="Dental Schools">Dental Schools</a></li>
+                                        <li><a href="/schools/schoolindex.asp?StudyType=3&tabProfileType=Law&ProfileType=Law" title="Career">Law Schools</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><a href="/schools/index.asp?StudyType=4" title="Language">Language</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="/schools/index.asp?StudyType=5" title="Online">Online</a></li>
+                            </ul>
+                        </div>
+                        <!-- /End SubTabs - Drop Menu -->
+
+                        <div id="Page-Content-All">
+
+                        <div class="Content-1Column">
+
+<!-- Begin Main Content -->
+
+
+<table class="LayoutTableSignUp" cellspacing="0" summary="Why Sign Up?">
+    <tr>
+        <th>New to SchoolFinder.com?</th>
+        <th>&nbsp;</th>
+        <th>Already a SchoolFinder.com User?</th>
+    </tr>
+    <tr>
+        <td style="width:48%;padding:10px 0 0 10px">
+            <p>Signing up on our websites is <strong>FREE!</strong> Membership on our sites allows you access to <a href="http://www.SchoolFinder.com">SchoolFinder.com</a>, <a href="http://www.ScholarshipsCanada.com" target="_blank">ScholarshipsCanada.com</a>, <a href="http://www.Books4Exchange.com" target="_blank">Books4Exchange.com</a> and <a href="http://www.StudyinCanada.com" target="_blank">StudyinCanada.com</a>. Why sign up? Check out the <a href="benefits.asp">benefits of membership</a>.</p>
+            <p>Your privacy is important to us and we do not sell or rent names. We will only send you e-mail messages if you opt in to receiving them during this registration.</p>
+            <p>If you want to sell your books or create your wish list, you'll need to sign in first. It's fast and free.</p>
+
+            <form name="register1" action="step1.asp">
+            <p><input type="submit" name="cmdSignUp" value="Sign Up" class="iButton" /></p>
+            </form>
+        </td>
+        <td style="background:#FFF url(../graphics/x.gif) repeat-y top center;width:25px;vertical-align:middle"><img src="../graphics/or_60x23.gif"></td>
+        <td style="width:52%;padding:10px 0 0 0">
+
+            <p>You can use your username and password (if you have one) for <a href="http://www.SchoolFinder.com">SchoolFinder.com</a>, <a href="http://www.ScholarshipsCanada.com" target="_blank">ScholarshipsCanada.com</a>, <a href="http://www.Books4Exchange.com" target="_blank">Books4Exchange.com</a> and <a href="http://www.StudyinCanada.com" target="_blank">StudyinCanada.com</a>.</p>
+
+            <form method="post" action="../login/login.asp" name="login11">
+            <table class="LayoutTable" cellspacing="0" summary="Why Sign Up?">
+            
+                <tr>
+                    <td style="text-align:right">Username:</td>
+                    <td><input type="text" name="usr" size="18" maxlength="50" class="iText"  autocomplete="off" /></td>
+                </tr>
+            
+
+                <tr>
+                    <td style="text-align:right">Password:</td>
+                    <td><input type="password" name="pwd" size="18" maxlength="50" class="iText"  autocomplete="off" /></td>
+                </tr>
+
+            
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="checkbox" name="remember" value="1" /> <a href="../login/remember.asp">Remember my username on this computer</a></td>
+                </tr>
+            
+
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input type="button" name="cmdLogin" value="Login" onclick="login()" class="iButton" id="signin_button" /></td>
+                </tr>
+            </table>
+            </form>
+
+            <p>&nbsp;</p>
+            
+            <p><a href="../login/forget.asp">Forgot your password?</a></p>
+
+        </td>
+    </tr>
+</table>
+<!-- End Main Content -->
+
+                        </div>
+
+                        <div class="Clear"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- /End Page Body Block -->
+
+		<div class="Clear"></div>
+
+                <!-- Page Footer Block -->
+                <div id="Page-Footer">
+
+                    <!-- Page Footer Links -->
+                    <div id="Page-Footer-Links">
+                        <ul>
+                            <li><a href="../contact/index.asp" title="Contact EDge"><span>Contact SchoolFinder</span></a></li>
+                            <li><a href="../about/index.asp" title="About EDge"><span>About SchoolFinder</span></a></li>
+                            <li><a href="http://www.edgeip.com/client" target="_blank" title="Client Centre"><span>School Administrators</span></a></li>
+                            <li><a href="../links/index.asp" title="Link to Us"><span>Link to Us</span></a></li>
+                            <li><a href="../links/community.asp" title="Community Links"><span>Community Links</span></a></li>
+                            <li><a href="../advertising/index.asp" title="Advertise with Us"><span>Advertise with Us</span></a></li>
+                            <li><a href="../links/housing.asp" title="Student Housing"><span>Student Housing</span></a></li>
+                            <li><a href="../privacy/index.asp" title="Privacy Policy"><span>Privacy Policy</span></a></li>
+                            <li><a href="../disclaim/index.asp" title="Disclaimer"><span>Disclaimer</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Page Footer Network Links -->
+                    <div id="Page-Footer-Network">
+                        <ul>
+                            <li>The SchoolFinder Family &nbsp;-&nbsp; </li>
+                            <li><a href="http://www.StudyinCanada.com" target="_blank" title="StudyinCanada.com"><span>StudyinCanada.com</span></a></li>
+                            <li><a href="http://www.ScholarshipsCanada.com" target="_blank" title="ScholarshipsCanada.com"><span>ScholarshipsCanada.com</span></a></li>
+                            <li><a href="http://www.GradSchoolFinder.com" target="_blank" title="GradSchoolFinder.com"><span>GradSchoolFinder.com</span></a></li>
+                            <li><a href="http://www.Career-College.com" target="_blank" title="Career-College.com"><span>Career-College.com</span></a></li>
+                            <li><a href="http://www.LanguageSchoolFinder.com" target="_blank" title="LanguageSchoolFinder.com"><span>LanguageSchoolFinder.com</span></a></li>
+                            <li><a href="http://www.Books4Exchange.com" target="_blank" title="Books4Exchange.com"><span>Books4Exchange.com</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Page Footer Version -->
+                    <div id="Page-Footer-Version">
+                        <p><span>SchoolFinder 2.0</span></p>
+                    </div>
+
+                    <!-- Page Footer Copyright -->
+                    <div id="Page-Footer-Copyright">
+                        <p><span>&copy; 2011 <a href="http://www.edgeip.com" target="_blank" title="EDge Interactive">EDge Interactive.</a></span> <span>All rights reserved.</span></p>
+                    </div>
+
+                    <div class="Clear"></div>
+                </div>
+                <!-- /End Page Footer Block -->
+
+                <!-- Extended Design Elements -->
+                <div id="Page-ExDiv1"><span>&nbsp;</span></div><div id="Page-ExDiv2"><span>&nbsp;</span></div><div id="Page-ExDiv3"><span>&nbsp;</span></div>
+                <div id="Page-ExDiv4"><span>&nbsp;</span></div><div id="Page-ExDiv5"><span>&nbsp;</span></div><div id="Page-ExDiv6"><span>&nbsp;</span></div>
+                <div id="Page-ExDiv7"><span>&nbsp;</span></div><div id="Page-ExDiv8"><span>&nbsp;</span></div><div id="Page-ExDiv9"><span>&nbsp;</span></div>
+                <!-- /End Extended Design Elements -->
+
+            </div>
+        </div>
+        <!-- /End Page Wrapper and Container -->
+
+
+        <!-- Google Analytics Tracking code -->
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-515950-1");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>
+        <!-- /End Google Analytics Tracking code -->
+
+
+    </body>
+</html>

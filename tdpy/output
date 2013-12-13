@@ -1,0 +1,201 @@
+SERVER:  Ready 0
+SERVER:  Ready 2
+SERVER:  Ready 4
+SERVER:  Ready 6
+SERVER:  Ready 8
+SERVER:  Ready 10
+SERVER:  Ready 12
+SERVER:  Ready 14
+SERVER:  Ready 16
+SERVER:  Ready 1
+SERVER:  Ready 5
+SERVER:  Ready 9
+SERVER:  Ready 13
+SERVER:  Ready 3
+SERVER:  Ready 11
+SERVER:  Ready 7
+SERVER:  Ready 15
+FASE  Estrazione
+provincia finta
+FASE  SceltaCavalli
+SERVER:  SceltaCavalli 1
+SERVER:  SceltaCavalli 7
+SERVER:  SceltaCavalli 11
+SERVER:  SceltaCavalli 10
+SERVER:  SceltaCavalli 13
+SERVER:  SceltaCavalli 2
+SERVER:  SceltaCavalli 16
+SERVER:  SceltaCavalli 6
+SERVER:  SceltaCavalli 14
+SERVER:  SceltaCavalli 5
+FASE  SceltaCavalli
+SERVER:  SceltaCavalli 1
+SERVER:  SceltaCavalli 7
+SERVER:  SceltaCavalli 11
+SERVER:  SceltaCavalli 10
+SERVER:  SceltaCavalli 13
+SERVER:  SceltaCavalli 2
+SERVER:  SceltaCavalli 16
+SERVER:  SceltaCavalli 6
+SERVER:  SceltaCavalli 14
+SERVER:  SceltaCavalli 5
+FASE  SceltaCavalli
+SERVER:  SceltaCavalli 1
+SERVER:  SceltaCavalli 7
+SERVER:  SceltaCavalli 11
+SERVER:  SceltaCavalli 10
+SERVER:  SceltaCavalli 13
+SERVER:  SceltaCavalli 2
+SERVER:  SceltaCavalli 16
+SERVER:  SceltaCavalli 6
+SERVER:  SceltaCavalli 14
+SERVER:  SceltaCavalli 5
+FASE  SceltaCavalli
+SERVER:  SceltaCavalli 1
+SERVER:  SceltaCavalli 7
+SERVER:  SceltaCavalli 11
+SERVER:  SceltaCavalli 10
+SERVER:  SceltaCavalli 13
+SERVER:  SceltaCavalli 2
+SERVER:  SceltaCavalli 16
+SERVER:  SceltaCavalli 6
+SERVER:  SceltaCavalli 14
+SERVER:  SceltaCavalli 5
+FASE  SceltaCavalli
+SERVER:  SceltaCavalli 1
+SERVER:  SceltaCavalli 7
+SERVER:  SceltaCavalli 11
+SERVER:  SceltaCavalli 10
+SERVER:  SceltaCavalli 13
+SERVER:  SceltaCavalli 2
+SERVER:  SceltaCavalli 16
+SERVER:  SceltaCavalli 6
+SERVER:  SceltaCavalli 14
+SERVER:  SceltaCavalli 5
+FASE  SceltaCavalli
+SERVER:  SceltaCavalli 1
+SERVER:  SceltaCavalli 7
+SERVER:  SceltaCavalli 11
+SERVER:  SceltaCavalli 10
+SERVER:  SceltaCavalli 13
+SERVER:  SceltaCavalli 2
+SERVER:  SceltaCavalli 16
+SERVER:  SceltaCavalli 6
+SERVER:  SceltaCavalli 14
+SERVER:  SceltaCavalli 5
+assegnazione
+FASE  SceltaFantino
+SERVER:  SceltaFantino 1
+SERVER:  SceltaFantino 7
+SERVER:  SceltaFantino 11
+SERVER:  SceltaFantino 10
+SERVER:  SceltaFantino 13
+SERVER:  SceltaFantino 2
+SERVER:  SceltaFantino 16
+SERVER:  SceltaFantino 6
+SERVER:  SceltaFantino 14
+SERVER:  SceltaFantino 5
+SOMMARIO OFFERTE
+Chi: 0 - fantino: 0
+Chi: 1 - fantino: 0
+Chi: 2 - fantino: 0
+Chi: 5 - fantino: 0
+Chi: 9 - fantino: 0
+Chi: 3 - fantino: 0
+Chi: 8 - fantino: 2
+Chi: 7 - fantino: 2
+Chi: 6 - fantino: 4
+Chi: 7 - fantino: 6
+Chi: 4 - fantino: 7
+Chi: 0 - fantino: 8
+Chi: 1 - fantino: 8
+Chi: 2 - fantino: 8
+Chi: 5 - fantino: 8
+Chi: 9 - fantino: 8
+Chi: 3 - fantino: 8
+Chi: 4 - fantino: 9
+Chi: 6 - fantino: 10
+Chi: 8 - fantino: 12
+SERVER:  FantinoDeciso 5
+decisione: 0
+[10, 13, 2, 5, 11, 16, 1, 14, 7, 6]
+to_remove [0, 1, 2, 3, 4] 6
+to_remove [] 0
+to_remove [] 2
+to_remove [] 0
+to_remove [] 1
+to_remove [] 0
+to_remove [] 1
+to_remove [] 1
+to_remove [5] 6
+to_remove [] 1
+to_remove [] 1
+to_remove [] 0
+to_remove [] 1
+to_remove [] 0
+to_remove [] 0
+to_remove [] 0
+SERVER:  FantinoDeciso 1
+decisione: 4
+[10, 13, 2, 5, 11, 16, 1, 14, 7, 6]
+to_remove [] 1
+to_remove [] 0
+to_remove [] 2
+to_remove [] 0
+to_remove [] 1
+to_remove [] 0
+to_remove [] 1
+to_remove [] 1
+to_remove [] 5
+to_remove [] 1
+to_remove [0] 1
+to_remove [] 0
+to_remove [] 1
+to_remove [] 0
+to_remove [] 0
+to_remove [] 0
+SERVER:  FantinoDeciso 11
+decisione: 7
+[10, 13, 2, 5, 11, 16, 1, 14, 7, 6]
+to_remove [] 1
+to_remove [] 0
+to_remove [] 2
+to_remove [] 0
+to_remove [] 1
+to_remove [] 0
+to_remove [] 1
+to_remove [] 1
+to_remove [] 5
+to_remove [0] 1
+to_remove [] 0
+to_remove [] 0
+to_remove [] 1
+to_remove [] 0
+to_remove [] 0
+to_remove [] 0
+SERVER:  FantinoDeciso 7
+decisione: 12
+[10, 13, 2, 5, 11, 16, 1, 14, 7, 6]
+to_remove [] 1
+to_remove [] 0
+to_remove [0] 2
+to_remove [] 0
+to_remove [] 1
+to_remove [] 0
+to_remove [] 1
+to_remove [] 1
+to_remove [] 5
+to_remove [] 0
+to_remove [] 0
+to_remove [] 0
+to_remove [] 1
+to_remove [] 0
+to_remove [] 0
+to_remove [] 0
+SERVER:  FantinoDeciso 14
+decisione: 6
+[10, 13, 2, 5, 11, 16, 1, 14, 7, 6]
+to_remove [] 1
+to_remove [] 0
+to_remove [0] 1
+to_remove [] 0

@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/icons" >
+        <file>images/add_user.png</file>
+        <file>images/contents2.png</file>
+        <file>images/delete_user.png</file>
+        <file>images/edit_user.png</file>
+        <file>images/exit.png</file>
+        <file>images/filenew.png</file>
+        <file>images/filesave.png</file>
+        <file>images/folder_orange_open.png</file>
+        <file>images/frac.png</file>
+        <file>images/math_sum.png</file>
+        <file>images/package_edutainment.png</file>
+        <file>images/pencil.png</file>
+    </qresource>
+</RCC>

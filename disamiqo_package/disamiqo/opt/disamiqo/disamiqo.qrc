@@ -1,0 +1,24 @@
+ <!DOCTYPE RCC><RCC version="1.0">
+ <qresource prefix="/">
+    <file>../../../images/disamiqoicon.png</file>
+    <file>../../../images/Matteo.png</file>
+    <file>../../../images/Riccardo.png</file>
+    <file>../../../images/Stefano.png</file>
+    <file>../../../images/Andrea.png</file>
+    <file>../../../images/Ciccio.png</file>
+    <file>../../../images/PJ.png</file>
+    <file>../../../images/Broccolo.png</file>
+    <file>../../../images/Simone.png</file>
+    <file>../../../images/Raffa.png</file>
+    <file>../../../images/Florentina.png</file>
+    <file>../../../images/Chiara.png</file>
+    <file>../../../images/CC.png</file>
+    <file>../../../images/Antonio.png</file>
+    <file>../../../images/Schlenk.png</file>
+    <file>../../../images/Vitaliano.png</file>
+    <file>../../../images/Alessandro.png</file>
+    <file>../../../images/Elisabetta.png</file>
+    <file>../../../images/Nicoletta.png</file>
+ </qresource>
+ </RCC>
+

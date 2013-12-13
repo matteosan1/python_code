@@ -1,0 +1,15 @@
+#! /usr/bin/python
+
+import sys
+from PyQt4 import Qt
+import Fantamania
+
+if __name__ == '__main__':
+    app = Qt.QApplication(sys.argv)
+  
+  
+    window = Fantamania.Fantamania()
+    window.show()
+
+    sys.exit(app.exec_())
+

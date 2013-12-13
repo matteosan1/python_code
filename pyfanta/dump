@@ -1,0 +1,314 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ellePage"><title>
+	Login.Asp - Fantagazzetta.com
+</title><meta name="MSSmartTagsPreventParsing" content="TRUE" /><meta name="rating" content="General" /><meta name="MS.LOCALE" content="IT" /><meta name="CATEGORY" content="home page" /><meta name="robots" content="index,follow" /><meta http-equiv="Classification" content="voti fantagazzetta" /><meta name="URL" content="http://www.fantagazzetta.com" /><meta name="revisit-after" content="5 days" /><meta name="VW96.objecttype" content="voti fantagazzetta, assist, giornali fantacalcistici, calcio, fantagazzetta, sport, calcio, gioco, serie A, squalificati, indisponibili, pagelle" /><meta name="DC.Subject" content="voti fantagazzetta, assist, giornali fantacalcistici, calcio, fantagazzetta, sport, calcio, gioco, serie A, squalificati, indisponibili, pagelle" /><meta name="DC.Coverage.PlaceName" content="Global" /><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><meta name="EdBlankInTitle" content=" - Fantagazzetta.com" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="http://eas4.emediate.eu/EAS_tag.1.0.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-4434155-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    
+
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+        { lang: 'it' }
+    </script>
+    <script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+</script> <script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-0371004536123891");
+GS_googleEnableAllServices();
+</script> <script type='text/javascript'>
+GA_googleAddSlot("ca-pub-0371004536123891", "FG_ros_160x600");
+GA_googleAddSlot("ca-pub-0371004536123891", "FG_ros_300x250_top");
+GA_googleAddSlot("ca-pub-0371004536123891", "FG_ros_728x90_squadre");
+GA_googleAddSlot("ca-pub-0371004536123891", "FG_ros_728x90_top");
+GA_googleAddSlot("ca-pub-0371004536123891", "FG_sidebar_120x600");
+GA_googleAddSlot("ca-pub-0371004536123891", "FG_Slim_Banner_ROS");
+GA_googleAddSlot("ca-pub-0371004536123891", "FG_ros_300x250_bottom");
+GA_googleAddAdSenseSlotAttr("FG_sidebar_120x600", "google_ad_channel", "4656213010");
+GA_googleAddAdSenseSlotAttr("FG_ros_300x250_top", "google_ad_channel", "5020600605");
+GA_googleAddAdSenseSlotAttr("FG_ros_728x90_top", "google_ad_channel", "2573146667");
+GA_googleAddAdSenseSlotAttr("FG_ros_160x600", "google_ad_channel", "3810551691");
+GA_googleAddAdSenseSlotAttr("FG_ros_300x250_bottom", "google_ad_channel", "6732939022");
+</script> <script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+
+    <style type="text/css">
+        .fb_edge_comment_widget
+        {
+            display: none !important;
+        }
+    </style>
+<script type="text/javascript" src="http://www.fantagazzetta.com/App_JavaScript/jmenu_ros.js"></script><link href="App_Themes/NKnobInterna/screen.css" type="text/css" rel="stylesheet" /></head>
+<body>
+    <!--------------facebook --->
+    <div id="fb-root">
+    </div>
+    <span id="phFBMain"><script>(function (d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=186972114679519";fjs.parentNode.insertBefore(js, fjs);} (document, 'script', 'facebook-jssdk'));</script></span>
+    <!--- fine facebook --->
+    <span id="phFB"></span>
+
+
+    <form method="post" action="login.asp" id="formMainMaster">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2ODE0MzkzMzEPZBYCZg9kFgQCAw8WAh4JaW5uZXJodG1sBbMCPHNjcmlwdD4oZnVuY3Rpb24gKGQsIHMsIGlkKSB7dmFyIGpzLCBmanMgPSBkLmdldEVsZW1lbnRzQnlUYWdOYW1lKHMpWzBdO2lmIChkLmdldEVsZW1lbnRCeUlkKGlkKSkgcmV0dXJuO2pzID0gZC5jcmVhdGVFbGVtZW50KHMpOyBqcy5pZCA9IGlkO2pzLnNyYyA9ICIvL2Nvbm5lY3QuZmFjZWJvb2submV0L2VuX1VTL2FsbC5qcyN4ZmJtbD0xJmFwcElkPTE4Njk3MjExNDY3OTUxOSI7ZmpzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGpzLCBmanMpO30gKGRvY3VtZW50LCAnc2NyaXB0JywgJ2ZhY2Vib29rLWpzc2RrJykpOzwvc2NyaXB0PmQCBw9kFgYCAQ9kFgQCBw9kFgICAg8WAh4HVmlzaWJsZWhkAgkPZBYEZg9kFgQCAQ8PZBYCHglvbmtleWRvd24F3QFpZihldmVudC53aGljaCB8fCBldmVudC5rZXlDb2RlKXtpZiAoKGV2ZW50LndoaWNoID09IDEzKSB8fCAoZXZlbnQua2V5Q29kZSA9PSAxMykpIHtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnSGVhZGVyTWFzdGVyUGFnZUVsbGVfTG9naW5NYXN0ZXJLbm9iX0xvZ2luVmlld1V0ZW50ZV9CdXR0b25TdWJtaXQnKS5jbGljaygpO3JldHVybiBmYWxzZTt9fSBlbHNlIHtyZXR1cm4gdHJ1ZX07IGQCAw8PZBYCHwIF3QFpZihldmVudC53aGljaCB8fCBldmVudC5rZXlDb2RlKXtpZiAoKGV2ZW50LndoaWNoID09IDEzKSB8fCAoZXZlbnQua2V5Q29kZSA9PSAxMykpIHtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnSGVhZGVyTWFzdGVyUGFnZUVsbGVfTG9naW5NYXN0ZXJLbm9iX0xvZ2luVmlld1V0ZW50ZV9CdXR0b25TdWJtaXQnKS5jbGljaygpO3JldHVybiBmYWxzZTt9fSBlbHNlIHtyZXR1cm4gdHJ1ZX07IGQCAg8WAh8BaGQCCQ9kFgICAQ8WAh4FY2xhc3MFCWVsZW0tbGFzdGQCCw9kFgICAQ9kFgJmDxQrAAIPFgQeC18hRGF0YUJvdW5kZx4LXyFJdGVtQ291bnRmZGRkGAEFSWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlckVsbGUkQXJ0aWNvbGlDYXRlZ29yaWUxJExpc3RWaWV3QXJ0aWNvbGlDYXRlZ29yaWUPPCsADgMIZgxmDQL/////D2Q=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBQK44tKhBAL2xeKgCwL9uK7cCwKCwNX3AwLgwfyhDg==" />
+    
+    
+ 
+<div class="header-wrapper">
+    <div class="bannerheader">
+        <div style="float: left;">
+            <!-- BEGIN JS TAG - 728*90-fantagazzetta.com < - DO NOT MODIFY --> <SCRIPT SRC="http://tk.ads.mmondi.com/ttj?id=627060" TYPE="text/javascript"></SCRIPT> <!-- END TAG -->
+
+        </div>
+        <div style="float: right;">
+            <SCRIPT LANGUAGE="JavaScript1.1" SRC="http://ww392.smartadserver.com/call/adj/146358/1484426/FantaGazzetta_Scommesse_IT.betclic/230x90/[timestamp]/no?[countgo]"></SCRIPT>
+<NOSCRIPT><a href="http://ww392.smartadserver.com/call/jumpi/146358/1484426/FantaGazzetta_Scommesse_IT.betclic/230x90/[timestamp]/no?" target="_blank">
+<img src="http://ww392.smartadserver.com/call/adi/146358/1484426/FantaGazzetta_Scommesse_IT.betclic/230x90/[timestamp]/no?" border="0"></a></NOSCRIPT>
+
+        </div>
+    </div>
+    <div class="header">
+        <h1>
+            <a href="../../../../"><span>FantaGazzetta - </span>Solo il meglio del calcio</a>
+        </h1>
+        <ul class='top_nav'><li class='first' ><a href='#'>My FG</a> <ul><li class='first' ><a href='../../la-mia-fantagazzetta'><img border='0' src='../../../../App_Themes/NKnob/configure.png' >Configura</a></li>
+</ul></li><li><a href="#" title="Fantagazzetta.Com">Fantagazzetta</a><ul><li class="first"><a href="../../../../voti-fantagazzetta-serie-A" title="Voti Serie A">Voti SerieA</a></li><li><a href="../../../../quotazioni-serie-A" title="Quotazioni Serie A">Quotazioni</a></li><li><a href="../../../../statistiche-calciatori-serie-A" title="Statistiche Calciatori Serie A">Statistiche</a></li><li><a href="../../../../probabili-formazioni-serie-A" title="Probabili Formazioni Serie A">Probabili formazioni</a></li><li><a href="../../../../indisponibili-serie-a" title="Indisponibili Serie A">Indisponibili</a></li><li><a href="../../../../rubriche/langolo-del-sig-cotenna/4" title="Consigli Serie A">Consigli</a></li><li><a href="../../../../rigoristi/probabili-rigoristi-serie-a" title="Rigoristi Serie A">Rigoristi</a></li><li><a href="../../../../area/guida-per-asta-perfetta/3" title="Guida per l'asta perfetta Fantagazzetta">Guida</a></li><li><a href="../../../../area/download/5" title="Download Fantagazzetta">Download</a></li><li><a href="../../../../livescore" title="LiveScore">LiveScore</a></li><li><a href="../../../../area/applicazioni-fantagazzetta/17" title="Applicazioni Fantagazzetta">App</a></li></ul></li>
+<li class="here"><a href="#" title="Articoli">Articoli</a><ul><li class="first"><a href="../../../../calcio-serie-a" title="Calcio Serie A">Calcio Serie A</a></li><li><a href="../../../../calcio-italia" title="Calcio Italia">Calcio Italia</a></li><li><a href="../../../../calcio-estero" title="Calcio Estero">Calcio Estero</a></li><li><a href="../../../../calciomercato" title="Calcio Mercato">CalcioMercato</a></li><li><a href="../../../../blogs" title="Blogs">Blogs</a></li><li><a href="../../../../approfondimenti" title="Articoli di approfondimento">Approfondimenti</a></li><li><a href="../../../../attualita" title="Articoli Attualità">Attualità</a></li><li><a href="../../../../altri-sport" title="Altri sport">Altri Sport</a></li><li><a href="../../../../gossip" title="Gossip">Gossip</a></li></ul></li>
+<li><a href="#" title="Rubriche">Rubriche</a><ul><li class="first"><a href="../../../../rubriche/editoriali/1" title="Articoli Editoriali">Editoriali</a></li><li><a href="../../../../rubriche/memento/2" title="Memento">Memento</a></li><li><a href="../../../../rubriche/fantaleaks/6" title="FantaLeaks">FantaLeaks</a></li><li><a href="../../../../rubriche/langolo-del-sig-cotenna/4" title="L'angolo del sig. Cotenna">Cotenna</a></li><li><a href="../../../../rubriche/fantaffari/7" title="FantaAffari">FantaAffari</a></li><li><a href="../../../../rubriche/moviola/8" title="La moviola di FG">Moviola</a></li><li><a href="../../../../rubriche/assist/10" title="Assist">Assist</a></li><li><a href="../../../../rubriche/stat-corner/15" title="Stat Corner">StatCorner</a></li><li><a href="../../../../rubriche/serie-b/16" title="Serie B">SerieB</a></li><li><a href="../../../../rubriche/tutto-estero/17" title="Tutto Estero">Estero</a></li><li><a href="../../../../rubriche/lega-pro/18" title="Lega Pro">LegaPro</a></li><li><a href="../../../../rubriche/fg-hattrick/19" title="FG Hattrick">FG Hattrick</a></li></ul></li>
+<li><a href="#" title="Squadre">Squadre</a><ul><li class="team"><a href="../../../../squadra/atalanta/home" title="Atalanta"><img alt="Atalanta" src="../../../../App_Resources/Images/Squadre/SquadrePng/ATALANTA.png" /></a></li><li class="team"><a href="../../../../squadra/bologna/home" title="Bologna"><img alt="Bologna" src="../../../../App_Resources/Images/Squadre/SquadrePng/BOLOGNA.png" /></a></li><li class="team"><a href="../../../../squadra/cagliari/home" title="Cagliari"><img alt="Cagliari" src="../../../../App_Resources/Images/Squadre/SquadrePng/CAGLIARI.png" /></a></li><li class="team"><a href="../../../../squadra/catania/home" title="Catania"><img alt="Catania" src="../../../../App_Resources/Images/Squadre/SquadrePng/catania.png" /></a></li><li class="team"><a href="../../../../squadra/cesena/home" title="Cesena"><img alt="Cesena" src="../../../../App_Resources/Images/Squadre/SquadrePng/cesena.png" /></a></li><li class="team"><a href="../../../../squadra/chievo/home" title="Chievo"><img alt="Chievo" src="../../../../App_Resources/Images/Squadre/SquadrePng/chievo.png" /></a></li><li class="team"><a href="../../../../squadra/fiorentina/home" title="Fiorentina"><img alt="Fiorentina" src="../../../../App_Resources/Images/Squadre/SquadrePng/fiorentina.png" /></a></li><li class="team"><a href="../../../../squadra/genoa/home" title="Genoa"><img alt="Genoa" src="../../../../App_Resources/Images/Squadre/SquadrePng/genoa.png" /></a></li><li class="team"><a href="../../../../squadra/inter/home" title="Inter"><img alt="Inter" src="../../../../App_Resources/Images/Squadre/SquadrePng/inter.png" /></a></li><li class="team"><a href="../../../../squadra/juventus/home" title="Juventus"><img alt="Juventus" src="../../../../App_Resources/Images/Squadre/SquadrePng/juventus.png" /></a></li><li class="team"><a href="../../../../squadra/lazio/home" title="Lazio"><img alt="Lazio" src="../../../../App_Resources/Images/Squadre/SquadrePng/lazio.png" /></a></li><li class="team"><a href="../../../../squadra/lecce/home" title="Lecce"><img alt="Lecce" src="../../../../App_Resources/Images/Squadre/SquadrePng/lecce.png" /></a></li><li class="team"><a href="../../../../squadra/milan/home" title="Milan"><img alt="Milan" src="../../../../App_Resources/Images/Squadre/SquadrePng/milan.png" /></a></li><li class="team"><a href="../../../../squadra/napoli/home" title="Napoli"><img alt="Napoli" src="../../../../App_Resources/Images/Squadre/SquadrePng/napoli.png" /></a></li><li class="team"><a href="../../../../squadra/novara/home" title="Novara"><img alt="Novara" src="../../../../App_Resources/Images/Squadre/SquadrePng/NOVARA.png" /></a></li><li class="team"><a href="../../../../squadra/palermo/home" title="Palermo"><img alt="Palermo" src="../../../../App_Resources/Images/Squadre/SquadrePng/palermo.png" /></a></li><li class="team"><a href="../../../../squadra/parma/home" title="Parma"><img alt="Parma" src="../../../../App_Resources/Images/Squadre/SquadrePng/parma.png" /></a></li><li class="team"><a href="../../../../squadra/roma/home" title="Roma"><img alt="Roma" src="../../../../App_Resources/Images/Squadre/SquadrePng/roma.png" /></a></li><li class="team"><a href="../../../../squadra/siena/home" title="Siena"><img alt="Siena" src="../../../../App_Resources/Images/Squadre/SquadrePng/siena.png" /></a></li><li class="team"><a href="../../../../squadra/udinese/home" title="Udinese"><img alt="Udinese" src="../../../../App_Resources/Images/Squadre/SquadrePng/udinese.png" /></a></li></ul></li>
+<li><a href="#" title="Serie A">Serie A</a><ul><li class="first"><a href="../../../../classifica-serie-A" title="Classifica Serie A">Classifica Serie A</a></li><li><a href="../../../../calendario-serie-A" title="Calendario Serie A">Calendario Serie A</a></li><li><a href="../../../../voti-live-serie-A" title="Voti Live Serie A">Voti Live Serie A</a></li><li><a href="../../../../area/gol-serie-a/15" title="Tutti i gol della serie A">Gol Serie A</a></li><li><a href="../../../../calciomercato-serie-a" title="Riepilogo Calcio Mercato">Riepilogo CalcioMercato</a></li></ul></li>
+<li><a href="#" title="Area Giochi">Giochi</a><ul><li class="first"><a href="../../../../area/fantagenius/6" title="Fanatgenius, il fantasy soccer riservato ai geni">Fantagenius</a></li><li><a href="../../../../area/gestione-leghe-private/7" title="Gestione leghe private Fantagazzetta.com">Gestione Leghe Private</a></li><li><a href="../../../../area/gol-and-win/8" title="Gol and Win Fantagazzetta">Gol and Win</a></li></ul></li>
+<li><a href="#" title="Scommesse">Scommesse</a><ul><li class="first"><a href="../../../../scommesse/strategie-e-sistemi/12" title="Scommesse - Strategie e Sistemi">Strategie e Sistemi</a></li><li><a href="../../../../scommesse/consigli-del-giorno/11" title="Scommesse: Consigli del giorno">Consigli del giorno</a></li></ul></li>
+<li><a href="#" title="Contatti">Contatti</a><ul><li class="first"><a href="../../../../area/redazione-sito/9" title="Redazione Sito">Redazione Sito</a></li><li><a href="../../../../contattaci" title="Contattaci">Contattaci</a></li><li><a href="../../../../area/pubblicità/11" title="Pubblicità su Fantagazzetta.com">Pubblicità</a></li></ul></li>
+<li><a href="#" title="Forum">Forum</a><ul><li class="first"><a href="http://forum.fantagazzetta.com/i-match-della-serie-presentazione-ed-analisi-tattica/" title="Match Serie A Fantagazzetta Forum" target="_blank">I match serie A</a></li><li><a href="http://forum.fantagazzetta.com/area-consigli/" title="Consigli Fantagazzetta Forum" target="_blank">Area Consigli</a></li><li><a href="http://forum.fantagazzetta.com/area-voti/" title="Area Voti Fantagazzetta Forum" target="_blank">Area Voti</a></li><li><a href="http://forum.fantagazzetta.com/commento-agli-articoli/" title="Commento Articoli Fantagazzetta Forum" target="_blank">Commento agli articoli</a></li><li><a href="http://forum.fantagazzetta.com/search.php?do=getnew&contenttype=vBForum_Post&exclude=54" title="Nuovi Messaggi Fantagazzetta Forum" target="_blank">Nuovi Messaggi</a></li><li><a href="http://forum.fantagazzetta.com/" title="Fantagazzetta Forum" target="_blank">Forum Home</a></li></ul></li>
+
+</ul>
+        
+        <div id="LoginViewRegistrazione_an">
+   
+   <a href="http://www.fantagazzetta.com/registrazione" title="Registrati Gratis a Fantagazzetta.com" class="register">Registrati Gratis</a>
+</div>
+
+ 
+        &nbsp;<div id="HeaderMasterPageElle_LoginMasterKnob_anonimo" class="login">
+    <p>
+        <label>
+            Username</label>
+        <input name="ctl00$HeaderMasterPageElle$LoginMasterKnob$TextBoxUserName" type="text" id="HeaderMasterPageElle_LoginMasterKnob_TextBoxUserName" class="login-user" onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {document.getElementById(&#39;HeaderMasterPageElle_LoginMasterKnob_LoginViewUtente_ButtonSubmit&#39;).click();return false;}} else {return true}; " />
+        <label>
+            Password</label><input name="ctl00$HeaderMasterPageElle$LoginMasterKnob$TextBoxPassword" type="password" id="HeaderMasterPageElle_LoginMasterKnob_TextBoxPassword" class="login-password" onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {document.getElementById(&#39;HeaderMasterPageElle_LoginMasterKnob_LoginViewUtente_ButtonSubmit&#39;).click();return false;}} else {return true}; " />
+        <input type="submit" name="ctl00$HeaderMasterPageElle$LoginMasterKnob$ButtonSubmit" value="Login" id="HeaderMasterPageElle_LoginMasterKnob_ButtonSubmit" class="login-submit" />
+        <a id="HeaderMasterPageElle_LoginMasterKnob_LinkButtonPasswordDimenticata" class="recover" href="javascript:__doPostBack(&#39;ctl00$HeaderMasterPageElle$LoginMasterKnob$LinkButtonPasswordDimenticata&#39;,&#39;&#39;)">Password dimenticata</a>
+    </p>
+</div>
+
+
+    </div>
+</div>
+
+    
+    
+    <div class="wrapper">
+        <!-- Main Content -->
+        <div class="main">
+            
+            
+
+            <div class="main-col">
+                
+<div class="navigator">
+    <div class="elem">
+        <a href="../../../../">Fantagazzetta</a></div>
+    <div id="NavigatorArticolo1_divCategoria" class="elem-last">
+        Login.Asp
+    </div>
+    <div id="NavigatorArticolo1_divTitoletto">
+        </div>
+</div>
+
+                
+ 
+    <div class="thick-cat">
+        
+<div class="banner4w665"><iframe width="666" scrolling="no" height="96" frameborder="0" id="fwnetC" marginheight="0px" marginwidth="0px" src="http://feed.4wnet.com/feed.html.ashx?a=5017&amp;n=2&amp;c=http://www.fantagazzetta.com/App_Themes/4w_665_new.css&amp;u=http://www.fantagazzetta.com/&amp;x=p&amp;hd=2&amp;i=1&amp;iw=60&amp;ih=60&amp;s=FG_CATEGORIE_BOTTOM_666"></iframe></div>
+
+
+
+
+    </div>
+
+            </div>
+            <div class="side-col">
+                <div class="banner5"><script type="text/javascript" src="http://eas4.emediate.eu/eas?cu=8946;cre=mu;js=y;target=_blank"></script></div>
+<div style="width:300px; height:267px; margin:0 auto;margin:bottom:5px">
+<div id="perf8s4dg5f2mnd91t3mvok6gcz6z"><a target="_blank" href="http://www.adobe.com/go/getflashplayer"> <img alt="Get Adobe Flash player" src="http://images.eplayer.performgroup.com/namedImage/12637/install_flash.gif" /></a></div>
+<script type='text/javascript' src='http://static.eplayer.performgroup.com/flash/js/swfobject.js'></script><script type='text/javascript' src='http://static.eplayer.performgroup.com/flash/js/performgroup.js'></script><script>addCustomPlayer('8s4dg5f2mnd91t3mvok6gcz6z', '', '', 300, 267, 'perf8s4dg5f2mnd91t3mvok6gcz6z', 'eplayer5');</script></div>
+
+                
+                <!-- Banner vignette-->
+                
+                <!-- Articoli Collegati-->
+                
+    <div class="netnews">
+<h3 class="side">Ultimi Articoli</h3><div class="box"><a class="img fl-l" href="../../../../rubriche/liga-il-barca-si-porta-a-4-ed-adesso-ci-crede-159468" title="LIGA - Il Barça si porta a -4 ed adesso ci crede"><img src="../../../../App_Resources/Images/Articoli/50X50/50X50_1427015965.jpg" alt="LIGA - Il Barça si porta a -4 ed adesso ci crede" /></a><h4><a href="../../../../rubriche/liga-il-barca-si-porta-a-4-ed-adesso-ci-crede-159468" title="LIGA - Il Barça si porta a -4 ed adesso ci crede">LIGA - Il Barça si porta a -4 ed adesso ci crede</a></h4><p><a href="../../../../rubriche/liga-il-barca-si-porta-a-4-ed-adesso-ci-crede-159468" >
+	La lunga settimana che preceder&agrave; il Super Clasico (il sesto stagionale) non &egrave; ancora iniziata, ma nel ...</a><a class="a_destra" href="../../../../rubriche/liga-il-barca-si-porta-a-4-ed-adesso-ci-crede-159468" title="LIGA - Il Barça si porta a -4 ed adesso ci crede">Leggi Tutto</a></div></p><div class="box"><a class="img fl-l" href="../../../../blog/juve-il-vero-segreto-e-la-difesa-159329" title="Juve: il vero segreto è la difesa"><img src="../../../../App_Resources/Images/Articoli/50X50/50X50_1356570628.jpg" alt="Juve: il vero segreto è la difesa" /></a><h4><a href="../../../../blog/juve-il-vero-segreto-e-la-difesa-159329" title="Juve: il vero segreto è la difesa">Juve: il vero segreto è la difesa</a></h4><p><a href="../../../../blog/juve-il-vero-segreto-e-la-difesa-159329" >Per alcuni &egrave; solo merito di Conte, per altri &egrave; ritornato l&#39;entusiasmo di una volta, per altri ancora ...</a><a class="a_destra" href="../../../../blog/juve-il-vero-segreto-e-la-difesa-159329" title="Juve: il vero segreto è la difesa">Leggi Tutto</a></div></p><div class="box"><a class="img fl-l" href="../../../../calcio-italia/marotta-rinnovo-del-piero-guardo-al-presente-159560" title="Marotta: 'Rinnovo Del Piero? Guardo al presente'"><img src="../../../../App_Resources/Images/Articoli/50X50/50X50_marotta-ga.jpg" alt="Marotta: "Rinnovo Del Piero? Guardo al presente"" /></a><h4><a href="../../../../calcio-italia/marotta-rinnovo-del-piero-guardo-al-presente-159560" title="Marotta: 'Rinnovo Del Piero? Guardo al presente'">Marotta: "Rinnovo Del Piero? Guardo al presente"</a></h4><p><a href="../../../../calcio-italia/marotta-rinnovo-del-piero-guardo-al-presente-159560" >
+	L&#39;argomento centrale, il punto cui tutto sembra andare a toccare a Vinovo e dintorni &egrave; uno solo: Alex Del ...</a><a class="a_destra" href="../../../../calcio-italia/marotta-rinnovo-del-piero-guardo-al-presente-159560" title="Marotta: 'Rinnovo Del Piero? Guardo al presente'">Leggi Tutto</a></div></p><div class="box"><a class="img fl-l" href="../../../../calcio-italia/gervasoni-per-milan-genoa-159559" title="Gervasoni per Milan-Genoa"><img src="../../../../App_Resources/Images/Articoli/50X50/50X50_gervasonif.jpg" alt="Gervasoni per Milan-Genoa" /></a><h4><a href="../../../../calcio-italia/gervasoni-per-milan-genoa-159559" title="Gervasoni per Milan-Genoa">Gervasoni per Milan-Genoa</a></h4><p><a href="../../../../calcio-italia/gervasoni-per-milan-genoa-159559" >
+	Sono stati designati gli arbitri per la 33.a giornata della serie A. Milan-Genoa &egrave; stata affidata a Gervasoni...</a><a class="a_destra" href="../../../../calcio-italia/gervasoni-per-milan-genoa-159559" title="Gervasoni per Milan-Genoa">Leggi Tutto</a></div></p><div class="box"><a class="img fl-l" href="../../../../scommesse/bundesliga-31-a-giornata-159558" title="Bundesliga - 31.a Giornata"><img src="../../../../App_Resources/Images/Articoli/50X50/50X50_robbenc.jpg" alt="Bundesliga - 31.a Giornata" /></a><h4><a href="../../../../scommesse/bundesliga-31-a-giornata-159558" title="Bundesliga - 31.a Giornata">Bundesliga - 31.a Giornata</a></h4><p><a href="../../../../scommesse/bundesliga-31-a-giornata-159558" >
+	Lewandoski e Robben: i nomi che con tutta probabilit&agrave; hanno deciso il titolo in Bundesliga. Il primo eroe ...</a><a class="a_destra" href="../../../../scommesse/bundesliga-31-a-giornata-159558" title="Bundesliga - 31.a Giornata">Leggi Tutto</a></div></p><div class="box-last"><a class="img fl-l" href="../../../../calcio-italia/il-parma-perde-mariga-159557" title="Il Parma perde Mariga"><img src="../../../../App_Resources/Images/Articoli/50X50/50X50_marigac.jpg" alt="Il Parma perde Mariga" /></a><h4><a href="../../../../calcio-italia/il-parma-perde-mariga-159557" title="Il Parma perde Mariga">Il Parma perde Mariga</a></h4><p><a href="../../../../calcio-italia/il-parma-perde-mariga-159557" >
+	Brutto colpo per il Parma e Roberto Donadoni che dovr&agrave; rinunciare a McDonald Mariga fino al termine della ...</a><a class="a_destra" href="../../../../calcio-italia/il-parma-perde-mariga-159557" title="Il Parma perde Mariga">Leggi Tutto</a></div></p></div>
+
+
+
+
+                <div class="banner5"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-0371004536123891";
+/* Fantagazzetta 300x250 articoli */
+google_ad_slot = "4399566491";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+
+                <!-- Ultimi Aggiornamenti-->
+                
+                <div class="rubriche">
+                    <div class="netnews" style="width:162px;float:left;padding-bottom:0;height:594px;overflow:hidden"><h3 class="ra">Rubriche</h3><div class="box"><a class="img fl-l" href="../../../../rubriche/liga-il-barca-si-porta-a-4-ed-adesso-ci-crede-159468" title="LIGA - Il Barça si porta a"><img alt="Rete numero 40 in Liga per Cristiano Ronaldo (Getty Images)" src="../../../../App_Resources/Images/Articoli/50x50/50x50_1427015965.jpg"></a><h4><a href="../../../../rubriche/liga-il-barca-si-porta-a-4-ed-adesso-ci-crede-159468" >LIGA - Il Barça si porta a -4 ed adesso ci crede</a></h4><p><a href="../../../../rubriche/liga-il-barca-si-porta-a-4-ed-adesso-ci-crede-159468" >
+	La lunga settimana che preceder&agrave; il Super Clasico (il sesto stagionale) non &egrave; ancora iniziata...</a><a class="a_destra" href="../../../../rubriche/liga-il-barca-si-porta-a-4-ed-adesso-ci-crede-159468" title="LIGA - Il Barça si porta a">Leggi Tutto</a></p></div><div class="box"><a class="img fl-l" href="../../../../rubriche/stat-corner-28-a-puntata-159546" title="STAT CORNER - 28.a puntata"><img alt="Stat Corner (Getty Images)" src="../../../../App_Resources/Images/Articoli/50x50/50x50_122132001f.jpg"></a><h4><a href="../../../../rubriche/stat-corner-28-a-puntata-159546" >STAT CORNER - 28.a puntata</a></h4><p><a href="../../../../rubriche/stat-corner-28-a-puntata-159546" >
+	Benritrovati con la rubrica Stat Corner. Oggi proporremo qualche statistica riguardante le squadre di Serie...</a><a class="a_destra" href="../../../../rubriche/stat-corner-28-a-puntata-159546" title="STAT CORNER - 28.a puntata">Leggi Tutto</a></p></div><div class="box"><a class="img fl-l" href="../../../../rubriche/la-moviola-di-fg-32-a-giornata-159543" title="LA MOVIOLA DI FG - 32.a "><img alt="Il momento del contatto Nagatomo-Mannini (Getty Images)" src="../../../../App_Resources/Images/Articoli/50x50/50x50_1426918019.jpg"></a><h4><a href="../../../../rubriche/la-moviola-di-fg-32-a-giornata-159543" >LA MOVIOLA DI FG - 32.a giornata</a></h4><p><a href="../../../../rubriche/la-moviola-di-fg-32-a-giornata-159543" >
+	&nbsp;
+
+	In attesa del posticipo tra Bologna e Cagliari che chiuder&agrave; il turno infrasettimanale, ...</a><a class="a_destra" href="../../../../rubriche/la-moviola-di-fg-32-a-giornata-159543" title="LA MOVIOLA DI FG - 32.a ">Leggi Tutto</a></p></div><div class="box-last"><a class="img fl-l" href="../../../../rubriche/premier-league-city-il-tonfo-poi-la-risalita-balotelli-da-9-5-fuori-dal-campo-159539" title="PREMIER LEAGUE - City: il "><img alt="Balotelli e il rosso che gli costa tre turni. Getty images" src="../../../../App_Resources/Images/Articoli/50x50/50x50_142631293e.jpg"></a><h4><a href="../../../../rubriche/premier-league-city-il-tonfo-poi-la-risalita-balotelli-da-9-5-fuori-dal-campo-159539" >PREMIER LEAGUE - City: il tonfo poi la risalita, Balotelli da 9,5, fuori dal campo</a></h4><p><a href="../../../../rubriche/premier-league-city-il-tonfo-poi-la-risalita-balotelli-da-9-5-fuori-dal-campo-159539" >
+	Due turni in una solo settimana, le squadre inglesi hanno disputato un turno infrasettimanale che ha ...</a><a class="a_destra" href="../../../../rubriche/premier-league-city-il-tonfo-poi-la-risalita-balotelli-da-9-5-fuori-dal-campo-159539" title="PREMIER LEAGUE - City: il ">Leggi Tutto</a></p></div></div>
+
+
+                    <div class="banner120"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-0371004536123891";
+/* Fantagazzetta 120x600 */
+google_ad_slot = "5691202961";
+google_ad_width = 120;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+
+                </div>
+                
+
+                
+                <!-- Banner google code-->
+                
+            </div>
+        </div>
+        <!-- END of Main Content -->
+        <div class="push">
+        </div>
+    </div>
+    </form>
+    
+<div class="footer">
+   <div class="foot_nav">
+<div class="nav_section">
+<h4>Corporate</h4>
+<ul>
+    <li><a href="http://www.fantagazzetta.com/area/pubblicit&agrave;/11" title="Pubblicit&agrave; Fantagazzetta">Pubblicit&agrave;</a></li>
+    <li><a href="http://www.fantagazzetta.com/contattaci" title="Contatti Fantagazzetta">Contatti</a></li>
+    <li><a href="http://www.fantagazzetta.com/area/redazione-sito/9" title="Redazione Fantagazzetta">Redazione</a></li>
+    <li><a href="http://www.fantagazzetta.com/area/termini-e-condizioni/12" title="Termini e condizioni di utlizzo">Termini e Condizioni</a></li>
+    <li><a href="http://www.fantagazzetta.com/area/privacy/13" title="Informativa sulla privacy">Privacy</a></li>
+</ul>
+</div>
+<div class="nav_section">
+<h4>Siti Network</h4>
+<ul>
+    <li><a href="http://www.canalejuve.it" target="_blank" title="Canale Juve">Canale Juve</a></li>
+    <li><a href="http://www.canalemilan.it" target="_blank" title="Canale Milan">Canale Milan</a></li>
+    <li><a href="http://www.canaleinter.it" target="_blank" title="Canale Inter">Canale Inter</a></li>
+    <li><a href="http://www.icampioncini.it" target="_blank" title="Campioncini serie a">ICampioncini</a></li>
+    <li><a href="http://www.ninoragosta.it" target="_blank" title="Campioncini serie a">Nino Ragosta</a></li>
+</ul>
+</div>
+<div class="nav_section">
+<h4>Giochi</h4>
+<ul>
+    <li><a href="http://www.fantagenius.com" target="_blank" title="Fantagenius">FantaGenius</a></li>
+    <li><a href="http://leghe.fantagazzetta.com" target="_blank" title="Gestione Leghe">Gestione Leghe</a></li>
+    <li><a href="http://www.golandwin.it" target="_blank" title="Golandwin">Gol And Win</a></li>
+</ul>
+</div>
+</div>
+<div class="join">
+<h4>Siti Amici</h4>
+<p><a href="http://www.tramedibeautiful.com" tutle="Beautiful" target="_blank">Tramedibeautiful</a>&nbsp;-&nbsp;<a href="http://www.consiglinaturali.it" title="Rimedi Naturali" target="_blank">Consigli naturali</a>&nbsp;-&nbsp;<a title="Calciomercato Serie A" href="http://www.fantagazzetta.com/calciomercato">Calciomercato</a>&nbsp;-&nbsp;<a href="http://www.calciomercato.it" title="Notizie Mercato">Notizie mercato</a>&nbsp;-&nbsp;<a href="http://www.direttagoal.it" title="Diretta goal">Diretta Goal</a>&nbsp;-&nbsp;<a href="http://www.il-prestito-personale.com" title="Prestito Personale" target="_blank">Prestito Personale</a></p>
+<form action="../../../../ricerca-articoli?id=1&amp;key=" method="get">
+    <fieldset>
+    <p><label>Cerca nel sito:</label><input type="text" gtbfieldid="186" class="email" value="" name="key" /><input type="submit" class="send" value="cerca" name="send" /></p>
+    </fieldset>
+</form>
+</div>
+<p class="copy"><strong>Testata reg. Trib. Napoli n.7 01/03/2012</strong> -  &copy;&nbsp;<a href="http://www.quadronica.com" target="_blank" title="Quadronica">Quadronica</a> s.r.l&nbsp;-&nbsp;P.IVA 060021941213 - Tutti i diritti riservati</p>
+<ul class="trade">
+    <li><a href="http://it.nielsen.com/" title="Nielsen" target="_blank">Nielsen</a></li>
+    <li><a href="http://www.audiweb.it" title="Audiweb" target="_blank">Audiweb</a></li>
+</ul>
+<ul class="social">
+    <li><a href="http://twitter.com/fantagazzetta/" title="Segui Fantagazzetta su Twitter" target="_blank">Twitter</a></li>
+    <li><a href="http://www.youtube.com/user/fantagazzetta" title="Canale Fantagazzetta su youtube" target="_blank">YouTube</a></li>
+    <li><a href="http://www.facebook.com/Fantagazzetta" title="La pagina ufficiale di fantagazzetta su facebook" target="_blank">Facebook</a></li>
+    <li><a href="http://rss.fantagazzetta.com" title="Rss Fantagazzetta" target="_blank">Feed</a></li>
+</ul>
+
+</div>
+
+
+
+    <!-- START Nielsen Online SiteCensus V6.0 -->
+    <!-- COPYRIGHT 2009 Nielsen Online -->
+    <script type="text/javascript" src="//secure-it.imrworldwide.com/v60.js">
+    </script>
+    <script type="text/javascript">
+        var pvar = { cid: "quadronica-it", content: "0", server: "secure-it" };
+        var trac = nol_t(pvar);
+        trac.record().post();
+    </script>
+    <noscript>
+        <div>
+            <img src="//secure-it.imrworldwide.com/cgi-bin/m?ci=quadronica-it&amp;cg=0&amp;cc=1&amp;ts=noscript"
+                width="1" height="1" alt="" />
+        </div>
+    </noscript>
+    <!-- END Nielsen Online SiteCensus V6.0 -->
+    <script type="text/javascript">
+    var fox_siteID = '23838';
+    var fox_tmstp = Math.round(Math.random() * 10000000000);
+    document.write('<scr' + 'ipt type=\"text/javascript\" src=\"http://www4.smartadserver.com/call/pubj/23838/161521/9988/M/' + fox_tmstp + '\" ></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+    var wr_host    = "aimfar";
+    var wr_site      = 1426;
+    var wr_page      = 4669;
+    var wr_board     = 11015;
+    var wr_boardsize = "1x1";
+    var wr_floating  = 1;
+    var wr_detail    = '';
+    var wr_thema     = 0;
+</script>
+<script type="text/javascript" src="http://cstatic.weborama.fr/js/publisher/customers/aimfar.js"></script>
+
+</body>
+</html>

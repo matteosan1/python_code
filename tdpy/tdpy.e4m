@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MultiProject SYSTEM "MultiProject-4.2.dtd">
+<!-- eric4 multi project file for multi project tdpy -->
+<!-- Saved: 2010-06-17, 17:53:15 -->
+<!-- Copyright (C) 2010 -->
+<MultiProject version="4.2">
+  <Description>TdPy</Description>
+  <Projects>
+    <Project isMaster="True">
+      <ProjectName>client</ProjectName>
+      <ProjectFile>/home/sani/python/tdpy/tdpyclient/TdPClient.e4p</ProjectFile>
+      <ProjectDescription>client</ProjectDescription>
+    </Project>
+    <Project isMaster="False">
+      <ProjectName>serever</ProjectName>
+      <ProjectFile>/home/sani/python/tdpy/tdpyserver/TdPServer.e4p</ProjectFile>
+      <ProjectDescription>serever</ProjectDescription>
+    </Project>
+  </Projects>
+</MultiProject>

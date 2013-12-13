@@ -1,0 +1,82 @@
+#include "strategiaprove.h"
+#include "resource.h"
+
+#include <commctrl.h>
+
+
+StrategiaProve::StrategiaProve(int y, int* s, string* c) {
+
+    for(int i=0; i<9; i++)
+        contrade[i+1] = c[i];
+
+    for(int i=0; i<6; i++)
+        strategia[i] = s[i];
+
+    chi = y + 1;
+}
+
+StrategiaProve::~StrategiaProve()
+{}
+
+BOOL CALLBACK StrategiaProve::DlgProc(HWND hwnd,UINT Message,WPARAM wParam,LPARAM lParam)
+{
+    HWND hEdit;
+    char b[255];
+    string s;
+    switch (Message)
+    {
+        case WM_COMMAND:
+            if (HIWORD(wParam) == BN_CLICKED) {
+                if (LOWORD(wParam) == IDOK) {
+                    OnExit();
+                    EndDialog(hwnd, IDOK);
+                }
+                if (LOWORD(wParam) == IDCANCEL)
+                    EndDialog(hwnd, IDCANCEL);
+            }
+            return true;
+        case WM_INITDIALOG:
+            hwndCtl = hwnd;
+            InitDlg();
+            return true;
+        default:
+            return false;
+	}
+}
+
+void StrategiaProve::InitDlg() {
+
+    HWND hEdit;
+    for(int i=0; i<6; i++) {
+
+        SendDlgItemMessage(hwndCtl, IDC_COMBO_1+i, CB_RESETCONTENT, 0, 0);
+        hEdit = GetDlgItem(hwndCtl, IDC_COMBO_1+i);
+        for(int j=0; j<11; j++) {
+            SendDlgItemMessage(hwndCtl, IDC_COMBO_1+i, CB_ADDSTRING, 0, (LPARAM) contrade[j].c_str());
+            SendDlgItemMessage(hwndCtl, IDC_COMBO_1+i, CB_SETCURSEL, 0, 0);
+        }
+    }
+
+//    for(int i=0; i<18; i++)
+//        CheckRadioButton(hwndCtl, IDC_CORRERE, IDC_NONCORRERE, IDC_CORRERE);
+}
+
+void StrategiaProve::OnExit() {
+
+    HWND hEdit;
+    for(int i=0; i<6; i++) {
+
+        hEdit = GetDlgItem(hwndCtl, IDC_COMBO_1+i);
+        int indice = SendMessage(hEdit, CB_GETCURSEL, 0, 0);
+        if (indice >= chi)
+            indice++;
+        if (indice != 0)
+            strategia[i] = indice - 1 + 20 ;
+    }
+
+    for(int i=0; i<6; i++)
+        if ((strategia[i] < 20) || (strategia[i] == -1))
+            for(int j=0; j<3; j++)
+                if (IsDlgButtonChecked(hwndCtl, IDC_CHECK_1A+j+(i*3)) == BST_CHECKED)
+                    strategia[i] += j^2;
+}
