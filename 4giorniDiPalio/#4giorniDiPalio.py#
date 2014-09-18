@@ -1,0 +1,54 @@
+import queryUpdatedDB
+import Sunto
+import subprocess
+
+buffer_comandi_DB = []
+
+# controlla aggiornamenti del DB ad ogni avvio
+# se la rete non c'e` solo modifiche locali da inviare dopo
+if (not queryUpdatedDB.checkSize()):
+    queryUpdatedDB.getUpdatedDB()
+else:
+    print "Il DB non e` stato aggiornato recentemente."
+
+
+# menu generale
+# item scritti (limita accesso guardando la data) 
+
+# Estrazione Contrade
+# Palio in generale
+# tratta
+# prove
+# Palio
+
+
+# estrazione contrade
+#   data + inserimento contrade + chi ha estratto chi
+# ad ogni step aggiorna DB in rete
+
+# notizie generali palio
+#   pittore, dedica, dirigenze...
+
+# tratta
+
+link = raw_input()
+
+if (not link == ""):
+    #inserimento manuale
+    subprocess.call("wget -O lista_cavalli.txt http://www.sunto.biz/2014/06/29/la_presentazione_dei_cavalli.htm", shell=True)
+    Sunto.parseHTML()
+else:
+    pass
+    Sunto.parseHTML()
+
+
+
+#   raccogli lista cavalli (via rete con parsing pdf ?), inserimento mauale
+#   tabella con dati assegnazione (senza batterie)
+
+# prove
+#   note/per prova (corsa, mossa, cambi fantini...)
+
+# palio
+#   mossa, tempo, descrizione, 
+

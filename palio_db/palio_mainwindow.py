@@ -5,9 +5,9 @@ from PyQt4 import QtGui, QtCore
 from ui_mainwindow import Ui_MainWindow
 #from sceltapalio import SceltaPalio
 
-contrade = ("Aquila", "Bruco", "Chiocciola", "Civetta", "Drago",
-"Giraffa", "Istrice", "Leocorno", "Lupa", "Nicchio", "Oca", "Onda",
-"Pantera", "Selva", "Tartuca", "Torre", "Montone", "---------")
+contrade = ("aquila", "bruco", "chiocciola", "civetta", "drago",
+"giraffa", "istrice", "leocorno", "lupa", "nicchio", "oca", "onda",
+"pantera", "selva", "tartuca", "torre", "montone", "---------")
 
 class PalioMainWindow(QtGui.QMainWindow):
   
@@ -106,7 +106,7 @@ class PalioMainWindow(QtGui.QMainWindow):
     
   def queryPalio(self):
     cursor = self.db.cursor()
-    cursor.execute("select data, indice from vittorie")
+    cursor.execute("select data, indice from vittorie order by data desc;")
     self.r = cursor.fetchall()
     self.ui.comboBox_5.clear()
     for i in self.r:
@@ -115,55 +115,58 @@ class PalioMainWindow(QtGui.QMainWindow):
   def sceltaPalio(self, i):
     self.indice = i
     ind = self.r[i][1]
+    data = self.r[i][0]
     self.populate_palio(ind)
-    self.populate_comparsa(ind)
+    self.populate_comparsa(data)
     self.populate_mossa(ind)
     self.drappellone(self.r[i][0])
     
   def drappellone(self, data):
-    self.cur.execute("select primo from vittorie where data=%s",(data))
+    self.cur.execute("select vince from vittorie where data=\""+data+"\";")
     result = self.cur.fetchall()
-    if (len(result) > 1):
+    if (len(result) > 1 or len(result) == 0):
       print "PROBLEMINO"
       return
     
     self.graphicScene.clear()
-    contrada_vincente = contrade[result[0][0]].lower()
-    nuova_data = str(data.day)+"."+str(data.month)+"."+str(data.year)[1:4]
-    nomefile = "/home/sani/Documents/Palio/fotografie/drappelloni/"+contrada_vincente+"/d"+contrada_vincente[0:3]+nuova_data+".gif"
+    contrada_vincente = result[0][0].lower()
+    data = data.split("-")
+    nuova_data = str(int(data[2]))+"."+str(int(data[1]))+"."+str(data[0][1:4])
+    nomefile = "/Users/sani/Documents/Palio/fotografie/drappelloni/"+contrada_vincente+"/d"+contrada_vincente[0:3]+nuova_data+".gif"
     if (not QtCore.QFile.exists(nomefile)):
-      nomefile = "/home/sani/Documents/Palio/fotografie/drappelloni/palio_non_disponibile.gif"
+      nomefile = "/Users/sani/Documents/Palio/fotografie/drappelloni/palio_non_disponibile.gif"
     pixMap = QtGui.QPixmap(nomefile)
     self.graphicScene.addPixmap(pixMap)
     self.ui.graphicsView.show()
     
   def populate_palio(self, indice):
-    self.cur.execute("select * from vittorie where indice = %s", (indice))
+    self.cur.execute("select * from vittorie where indice = "+str(indice)+";")
     self.vittoria = self.cur.fetchall()
     result = self.vittoria
     if (len(result) > 1):
       print "PROBLEMINO"
     else:  
-      self.ui.dateEdit.setDate(result[0][0]) #data
+      data = result[0][0].split("-")
+      self.ui.dateEdit.setDate(QtCore.QDate(int(data[0]), int(data[1]), int(data[2]))) #data
       self.ui.comboBox.addItems(contrade)
       if (result[0][2] is not None):
-	self.ui.comboBox.setCurrentIndex(result[0][2]) #primo
+	self.ui.comboBox.setCurrentIndex(contrade.index(result[0][2])) #primo
       else:
 	self.ui.comboBox_2.setCurrentIndex(17) #secondo
 	  
       self.ui.comboBox_2.addItems(contrade)
       if (result[0][3] is not None):
-	self.ui.comboBox_2.setCurrentIndex(result[0][3]) #secondo
+	self.ui.comboBox_2.setCurrentIndex(contrade.index(result[0][3])) #secondo
       else:
 	self.ui.comboBox_2.setCurrentIndex(17) #secondo
 	
-      if (result[0][5] is not None):
-	self.ui.lineEdit.setText(result[0][5]) #pittore
+      if (result[0][6] is not None):
+	self.ui.lineEdit.setText(result[0][6]) #pittore
       else:
 	self.ui.lineEdit.setText("") #dedica
 	  
-      if (result[0][6] is not None):
-	self.ui.lineEdit_2.setText(result[0][6]) #dedica
+      if (result[0][7] is not None):
+	self.ui.lineEdit_2.setText(result[0][7]) #dedica
       else:
 	self.ui.lineEdit_2.setText("") #dedica
 	
@@ -172,49 +175,50 @@ class PalioMainWindow(QtGui.QMainWindow):
       else:
 	self.ui.lineEdit_11.setText("0:00.00") #tempo
       
-      if (result[0][8] is not None):
-        self.ui.lineEdit_4.setText(str(result[0][8])) #numero unico
+      if (result[0][9] is not None):
+        self.ui.lineEdit_4.setText(str(result[0][9])) #numero unico
       else:
 	self.ui.lineEdit_4.setText("")
 
-      if (result[0][9] is not None):
-	self.ui.lineEdit_3.setText(str(result[0][9])) #mossiere 
+      if (result[0][5] is not None):
+	self.ui.lineEdit_3.setText(str(result[0][5])) #mossiere 
       else:
 	self.ui.lineEdit_3.setText("")
 	
-      if (result[0][7] is not None):
-	self.ui.textEdit.setText(result[0][7]) # note
+      if (result[0][8] is not None):
+	self.ui.textEdit.setText(result[0][8]) # note
       else:
 	self.ui.textEdit.setText("")
 	
-      if (result[0][10] is not None):	
+      if (result[0][10] is not None and not str(result[0][10]) == ""):	
 	self.ui.checkBox.setCheckState(int(result[0][10])) # libreria
       else:
 	self.ui.checkBox.setCheckState(QtCore.Qt.Unchecked)
   
   def populate_mossa(self, indice):
-    self.cur.execute("select * from mosse where indice = %s order by estrazione", (indice))
+    self.cur.execute("select * from mosse where indice = "+str(indice)+" order by estrazione;")
     result = self.cur.fetchall()
     if (len(result) > 10):
       print "PROBLEMINO"
       return
     for j,i in enumerate(result):  
-      self.ui.spinBox[j].setValue(i[2]) # assegnazione
-      self.ui.spinBox_2[j].setValue(i[4]) # orecchio
-      self.ui.lineEdit_10[j].setText(i[8]) # mossa
+      if (i[8] is not None):
+        self.ui.spinBox[j].setValue(int(i[8])) # assegnazione
+      self.ui.spinBox_2[j].setValue(int(i[9])) # orecchio
+      self.ui.lineEdit_10[j].setText(i[6]) # mossa
       self.ui.comboBox_3[j].addItems(contrade)
-      self.ui.comboBox_3[j].setCurrentIndex(i[5]) # contrada
-      self.ui.lineEdit_6[j].setText(i[6]) # cavallo
-      self.ui.lineEdit_7[j].setText(i[7]) # fantino
+      self.ui.comboBox_3[j].setCurrentIndex(contrade.index(i[3])) # contrada
+      self.ui.lineEdit_6[j].setText(i[4]) # cavallo
+      self.ui.lineEdit_7[j].setText(i[5]) # fantino
       self.ui.lineEdit_8[j].setText(str(i[10])) # cadute
       self.ui.comboBox_4[j].addItems(contrade)
-      if (i[12] is not None):
-	self.ui.comboBox_4[j].setCurrentIndex(i[12]) # estratta da
+      if (str(i[2]) !="-" and i[2] is not None):
+	self.ui.comboBox_4[j].setCurrentIndex(contrade.index(i[2])) # estratta da
       else:
 	self.ui.comboBox_4[j].setCurrentIndex(17)
       
       if (i[9] is not None):
-	self.ui.lineEdit_5[j].setText(i[9]) # capitano
+	self.ui.lineEdit_5[j].setText(i[12]) # capitano
       else:
 	self.ui.lineEdit_5[j].setText("")
 	
@@ -223,11 +227,12 @@ class PalioMainWindow(QtGui.QMainWindow):
       else:
 	self.ui.lineEdit_9[j].setText("")
     
-  def populate_comparsa(self, indice):
+  def populate_comparsa(self, data):
     self.ui.listWidget.clear()
-    self.cur.execute("select * from comparse where indice = %s order by nome", (indice))
+    self.cur.execute("select * from comparse where data = \""+str(data)+"\" order by nome;")
     result = self.cur.fetchall()
-    if (len(result) < 1):
+    if (len(result) == 0):
+      print "NIENTE COMPARSA"
       return
     ordine_comparsa = ("Tamburino", "Alfiere", "Duce", "Uomo d'Arme", "Figurin Maggiore",
     "Paggio Porta Insegna", "Palafreniere", "Soprallasso", "Barbaresco",
@@ -235,12 +240,12 @@ class PalioMainWindow(QtGui.QMainWindow):
     j=0
     while j < len(ordine_comparsa):
       for i in result:
-	if (i[0] == ordine_comparsa[j]):
-	  self.ui.listWidget.addItem(i[0]+": " + i[1])
+	if (str(i[1]) == ordine_comparsa[j]):
+	  self.ui.listWidget.addItem(i[1]+": " + i[2])
 	  rows = self.ui.listWidget.count()
 	  item = self.ui.listWidget.item(rows-1)
 	  item.setFlags(QtCore.Qt.ItemIsEditable|QtCore.Qt.ItemIsEnabled|QtCore.Qt.ItemIsSelectable)	  
-      j = j+1
+      j=j+1
      
   def newTableLine(self, row, col):
     if (col != 0):
