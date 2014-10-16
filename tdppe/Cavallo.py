@@ -1,8 +1,9 @@
-import sys, math
+import sys, math, copy
 from Vector import Vector, Path, Obstacle
+import random
 
 class Cavallo():
-    def __init__(self, currentNode, vmax = 0., thePath=[]):
+    def __init__(self, currentNode, offset, thePath=[]):
         #FIXME Caratteristiche cavallo
         self.currentNode = currentNode+1
         self.pathDir = 1
@@ -10,7 +11,7 @@ class Cavallo():
         self.t     = self.nodes[self.currentNode].waypoint
         self.max_v = self.nodes[self.currentNode].vmax
         #self.p = Vector(pos)
-        self.p     = self.nodes[currentNode].waypoint
+        self.p     = self.nodes[currentNode].waypoint+Vector(offset)
         self.v     = Vector([0., 0.])
         self.max_see_ahead = 30
         self.max_avoid_force = 1.5
@@ -28,6 +29,7 @@ class Cavallo():
             dynamic_length = self.v.mod()/self.max_v*self.max_see_ahead
         else:
             return Vector()
+
         ahead = self.p + self.v.norm(dynamic_length)
         ahead2 = self.p + self.v.norm(dynamic_length*0.5)
         obstacle = self.takeOver(ahead, ahead2)
@@ -63,6 +65,9 @@ class Cavallo():
  
     def steering(self):
         current_v = self.v.mod()
+        #print "POS", self.p.coord()
+        #print "TAR", self.t.coord()
+        
         desired_velocity = (self.t-self.p).norm(current_v)
         steering = (desired_velocity-self.v)
         avoid = self.collisionDetector()
@@ -81,10 +86,8 @@ class Cavallo():
 
     def thrust(self, slowDown=False):
         current_v = self.v.mod()
-
-        if (current_v == 0.):
-            self.v = Vector([-1., -1.])
-
+        #if (current_v == 0.):
+        #    self.v = Vector([-1., -1.])
         if (current_v > self.max_v):
             if ((current_v - 0.5) <= 0):
                 self.v = self.v.norm(0)
@@ -96,24 +99,30 @@ class Cavallo():
             self.v = self.v.norm(current_v)
 
     def postoAlCanape(self, posto):
-        p = Path("ingresso_canape.dat")
-        self.nodes += p.nodes
-        self.nodes.append(self.nodes[-1])
-        self.nodes[-posto-2].vmax = 1
-        self.nodes[-posto-1].vmax = 0
+        self.nodes = copy.deepcopy(self.nodes)
+        self.nodes[23].nextNode = 24
+        self.nodes[-posto-3].vmax = 1
+        self.nodes[-posto-2].vmax = 0
 
     def move(self, dt):
-        if (self.strategy == "mossa"):
-            self.pathFollowing()
-            self.steering()
-            self.thrust()
-            self.updatePosition(dt)
+        #if (self.strategy == "mossa"):
+        self.pathFollowing()
+        self.steering()
+        self.thrust()
+        self.updatePosition(dt)
 
-    def start(self):
-        #FIXME scegli una direzione di partenza e assegna uno scatto
+
+    def start(self, strategy):
+        self.strategy = strategy
         current_v = self.v.mod()
         if (current_v == 0.):
-            self.v = Vector([1., 0.])
+            if (self.strategy == "corsa"):
+                #FIXME scegli una direzione di partenza e assegna uno scatto
+                # metti lo scatto in steering
+                angle = float(random.randint(0, 90))*math.pi/2/90.
+                self.v = Vector([1.*math.cos(angle), 1.*math.sin(angle)])
+            else:
+                self.v = Vector([1., 0.])
         else:
             updated_v = current_v + 1.
             if (updated_v >= self.max_v):
@@ -136,10 +145,13 @@ class Cavallo():
         q = self.nodes[self.currentNode].q
         d = abs(self.p.p[1] - m*self.p.p[0] - q)/math.sqrt(1+m*m)
         angle = target_boundary.dot(self.v)  
-
-        #print angle, d
+        
         if (angle<0 and d < 10):
-            self.currentNode += self.pathDir
+            #print self.nodes[self.currentNode].nextNode
+            if (self.nodes[self.currentNode].nextNode == -1):
+                self.currentNode += self.pathDir
+            else:
+                self.currentNode = self.nodes[self.currentNode].nextNode
             # TORNA INDIETRO
             #if (self.currentNode >= len(self.nodes) or self.currentNode < 0):
             #    self.pathDir *= -1 

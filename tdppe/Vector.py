@@ -63,12 +63,13 @@ class Vector():
 
 
 class Node():
-    def __init__(self, wp=Vector(), bp=Vector(), md=0, qd=0, vd=1000.):
+    def __init__(self, wp=Vector(), bp=Vector(), md=0, qd=0, vd=1000., nextNode=-1):
         self.waypoint = wp
         self.backpoint = bp
         self.m = md
         self.q = qd
         self.vmax = vd
+        self.nextNode = nextNode
 
 class Path():
     def __init__(self, filename=""):
@@ -85,7 +86,7 @@ class Path():
             if ("#" in l):
                 continue
             items = l.split("\n")[0].split()
-            n = Node(Vector([float(items[0]), float(items[1])]), Vector([float(items[2]), float(items[3])]), float(items[4]), float(items[5]), float(items[6]))
+            n = Node(Vector([float(items[0]), float(items[1])]), Vector([float(items[2]), float(items[3])]), float(items[4]), float(items[5]), float(items[6]), int(items[7]))
             self.nodes.append(n)
         
 class Obstacle():

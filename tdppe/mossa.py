@@ -4,7 +4,7 @@ from pygame.locals import *
 from Vector import Vector, Path, Obstacle
 
 path = Path("tondino.dat")
-#path.add("ingresso_canape.dat")
+path.add("ingresso_canape.dat")
 
 
 cavalli = []
@@ -25,10 +25,9 @@ cavalli.append(Cavallo.Cavallo(12, 50, path))
 
 for c in cavalli:
     c.start()
-#c1.postoAlCanape(1)
 
 chiamata_mossa = 0
-mossa = [2,4,1,3]
+mossa = [1,3,0,2]
 
 pygame.time.set_timer(USEREVENT+1, 10000)
 while(True):
@@ -37,10 +36,11 @@ while(True):
                 pygame.quit()
                 sys.exit(0)
         if event.type == (USEREVENT+1):
-            print "MOSSA:", mossa[chiamata_mossa]
-            cavalli[mossa[chiamata_mossa]].postoAlCanape(chiamata_mossa+1)
-            for c in cavalli:
-                print len(c.nodes)
+            if ((chiamata_mossa>0 and cavalli[mossa[chiamata_mossa-1]].currentNode > 24) or chiamata_mossa == 0):
+                cavalli[mossa[chiamata_mossa]].postoAlCanape(chiamata_mossa)
+                chiamata_mossa += 1
+                if (chiamata_mossa == 4):
+                    pygame.time.set_timer(USEREVENT+1, 0)
     
     screen.fill(black)
     msElapsed = clock.tick(60)
