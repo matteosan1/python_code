@@ -1,20 +1,21 @@
-import pygame
 import sys, math
-from Vector import Vector, Path
+from Vector import Vector, Path, Obstacle
 
 class Cavallo():
-    def __init__(self, pos = [130,0],vmax = 60., thePath=[]):
+    def __init__(self, currentNode, vmax = 0., thePath=[]):
         #FIXME Caratteristiche cavallo
-        self.currentNode = 0
+        self.currentNode = currentNode+1
         self.pathDir = 1
         self.nodes = thePath.nodes
         self.t     = self.nodes[self.currentNode].waypoint
         self.max_v = self.nodes[self.currentNode].vmax
-        self.p = Vector(pos)
-        self.v = Vector([0., 0.])
+        #self.p = Vector(pos)
+        self.p     = self.nodes[currentNode].waypoint
+        self.v     = Vector([0., 0.])
         self.max_see_ahead = 30
         self.max_avoid_force = 1.5
         self.obstacles = []
+        self.strategy = "mossa"
 
     def setObstacles(self, obs):
         self.obstacles = obs
@@ -23,7 +24,10 @@ class Cavallo():
         self.p = self.p + (self.v*dt)
 
     def collisionDetector(self):
-        dynamic_length = self.v.mod()/self.max_v*self.max_see_ahead
+        if (self.max_v != 0):
+            dynamic_length = self.v.mod()/self.max_v*self.max_see_ahead
+        else:
+            return Vector()
         ahead = self.p + self.v.norm(dynamic_length)
         ahead2 = self.p + self.v.norm(dynamic_length*0.5)
         obstacle = self.takeOver(ahead, ahead2)
@@ -62,7 +66,6 @@ class Cavallo():
         desired_velocity = (self.t-self.p).norm(current_v)
         steering = (desired_velocity-self.v)
         avoid = self.collisionDetector()
-
         steering = steering + avoid
 
         if (steering.mod() > 2.5):
@@ -78,22 +81,33 @@ class Cavallo():
 
     def thrust(self, slowDown=False):
         current_v = self.v.mod()
+
         if (current_v == 0.):
-            self.v = Vector([1., 0.])
+            self.v = Vector([-1., -1.])
 
         if (current_v > self.max_v):
-            self.v = self.v.norm(current_v - 0.5)
+            if ((current_v - 0.5) <= 0):
+                self.v = self.v.norm(0)
+            else:
+                self.v = self.v.norm(current_v - 0.5)
         elif (current_v < self.max_v):
             self.v = self.v.norm(current_v + 0.5)
         else:
             self.v = self.v.norm(current_v)
 
+    def postoAlCanape(self, posto):
+        p = Path("ingresso_canape.dat")
+        self.nodes += p.nodes
+        self.nodes.append(self.nodes[-1])
+        self.nodes[-posto-2].vmax = 1
+        self.nodes[-posto-1].vmax = 0
+
     def move(self, dt):
-        # FIXME SCEGLI STRATEGIA
-        self.pathFollowing()
-        self.thrust()
-        self.steering()
-        self.updatePosition(dt)
+        if (self.strategy == "mossa"):
+            self.pathFollowing()
+            self.steering()
+            self.thrust()
+            self.updatePosition(dt)
 
     def start(self):
         #FIXME scegli una direzione di partenza e assegna uno scatto
@@ -123,72 +137,16 @@ class Cavallo():
         d = abs(self.p.p[1] - m*self.p.p[0] - q)/math.sqrt(1+m*m)
         angle = target_boundary.dot(self.v)  
 
+        #print angle, d
         if (angle<0 and d < 10):
-        #if (self.t.distance(self.p) <= 50.):
             self.currentNode += self.pathDir
-            if (self.currentNode >= len(self.nodes) or self.currentNode < 0):
-                self.pathDir *= -1 
-                self.currentNode += self.pathDir
-
+            # TORNA INDIETRO
+            #if (self.currentNode >= len(self.nodes) or self.currentNode < 0):
+            #    self.pathDir *= -1 
+            #    self.currentNode += self.pathDir
+            if (self.currentNode == len(self.nodes)):
+                self.currentNode = 0 
+                           
             self.t     = self.nodes[self.currentNode].waypoint
             self.max_v = self.nodes[self.currentNode].vmax
 
-class Obstacle():
-    def __init__(self, pos=[-1, -1]):
-        self.p = Vector(pos)
-        self.radius = 10
-        self.type = "block"
-
-    
-path = Path("piazza_racing_line_v2.dat")
-#for t in bordi:
-#    path.addNode(Vector(t))
-c1 = Cavallo([171,582], 50, path)
-#c2 = Cavallo([151,602], 40, path)
-
-pygame.init()
-clock = pygame.time.Clock()
-
-screen = pygame.display.set_mode((1200, 1200))
-white = (255, 255, 255)
-red = (255, 0 , 0)
-black = (0, 0, 0)
-blue = (0, 0, 255)
-
-while(True):
-    for event in pygame.event.get():
-        if (event.type == pygame.QUIT):
-                pygame.quit()
-                sys.exit(0)
-    
-    screen.fill(black)
-    msElapsed = clock.tick(60)
-
-    obstacles = []
-    o = Obstacle(c1.p.coord())
-    obstacles.append(o)
-    #o = Obstacle(c2.p.coord())
-    #obstacles.append(o)
-    c1.setObstacles(obstacles)
-    #c2.setObstacles(obstacles)
-    
-    c1.move(msElapsed/1000.)
-    #c2.move(msElapsed/1000.)
-
-    pygame.draw.circle(screen, red, c1.p.coord(), 5, 0)
-    #pygame.draw.circle(screen, white, c2.p.coord(), 5, 0)
-
-    for n in path.nodes:
-        b = (int(n.backpoint.p[0]), int(n.backpoint.p[1]))
-        pygame.draw.circle(screen, blue, b, 1, 0)
-    #for l in linee:
-    #    #print l[0:2]
-    #    l1 = (int(l[0]), int(l[1]))
-    #    l2 = (int(l[2]), int(l[3]))
-    #pygame.draw.line(screen, blue, l1, l2, 1)
-    
-    pygame.display.update()
-    #if (c.p.x() > 640):
-    #    sys.exit()
-    #if (c.p.y() > 480):
-    #    sys.exit()

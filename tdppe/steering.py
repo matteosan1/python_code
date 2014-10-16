@@ -67,8 +67,8 @@ class Path():
         for point in p:
             self.nodes.append(point)
  
-    def addNode(self, node):
-        self.nodes.append(node)
+    def addNode(self, node, maxV):
+        self.nodes.append((node, maxV))
  
     def getNodes(self):
         return self.nodes
@@ -78,12 +78,12 @@ class Cavallo():
         self.currentNode = 0
         self.pathDir = 1
         self.nodes = thePath.getNodes()
-        self.t = self.nodes[self.currentNode]
-        self.max_v = 100.
+        self.t = self.nodes[self.currentNode][0]
+        self.max_v = self.nodes[self.currentNode][1]
         self.p = Vector(pos)
         self.v = Vector([0., self.max_v])
-        self.max_see_ahead = 30
-        self.max_avoid_force = 1.5
+        self.max_see_ahead = 20
+        self.max_avoid_force = 10.
         self.obstacles = obs
         self.closestApproach = 999.
 
@@ -94,7 +94,7 @@ class Cavallo():
         dynamic_length = self.v.mod()/self.max_v*self.max_see_ahead
         ahead = self.p + self.v.norm(dynamic_length)
         ahead2 = self.p + self.v.norm(dynamic_length*0.5)
-        obstacle = self.findMostThreateningObstacle(ahead, ahead2)
+        obstacle, dist = self.findMostThreateningObstacle(ahead, ahead2)
         avoidance = Vector()
  
         if (obstacle.p.coord() != [-1, -1]):
@@ -104,6 +104,7 @@ class Cavallo():
             elif (avoidance.y() == 0):
                 avoidance = Vector([0, self.max_avoid_force])
 
+        #print obstacle.p.coord(), dist, avoidance.p
         return avoidance
 
     def findMostThreateningObstacle(self, ahead, ahead2):
@@ -115,32 +116,48 @@ class Cavallo():
                                o.p.distance(self.p) < obstacle.p.distance(self.p))):
                 obstacle = o
 
-        return obstacle
+        return obstacle, obstacle.p.distance(self.p)
 
     def lineIntersectsCircle(self, o, ahead, ahead2):
-        return o.p.distance(ahead) <= o.radius*2. or o.p.distance(ahead2) <= o.radius*2. or o.p.distance(self.p)<=(o.radius+15.)
+        return o.p.distance(ahead) <= o.radius*2. or o.p.distance(ahead2) <= o.radius*2. or o.p.distance(self.p)<=(o.radius*2.)
  
     def steering(self):
         current_v = self.v.mod()
         desired_velocity = (self.t-self.p).norm(current_v)
         steering = (desired_velocity-self.v)
         avoid = self.collisionDetector()
-        if (steering.mod() < avoid.mod()*2.5):
-            steering = avoid
-        else:
-            steering = steering + avoid
+
+        steering = steering + avoid
+
+        ## r = v*v/a_t
+        #if (steering.transv(self.v) > 1.0):
+        #    #print "Steering", steering.mod(), steering.transv(self.v),
+        #    r = self.v.mod2()/steering.transv(self.v)
+        #    k = 0.8
+        #    print r, self.v.mod(), steering.transv(self.v), math.sqrt(r*k)
+        #    if (steering.transv(self.v) > math.sqrt(k*r)):# and k*r > 400):
+        #        current_v = current_v - 5.
+        #        #self.v = self.v.norm(current_v - 5.)
 
         if (steering.mod() > 2.5):
             steering = steering.norm(2.5)
 
-        # r = v*v/a_t
-        if (steering.transv(self.v) != 0):
-            r = self.v.mod()*self.v.mod()/steering.transv(self.v)
-            k = 0.5
-            print math.sqrt(k*r)
-            
-        self.v = self.v + steering
-        self.v = self.v.norm(current_v)
+        self.v = self.v + steering + avoid
+        if (current_v > self.max_v):
+            self.thrust(True)
+        elif (current_v < self.max_v):
+            self.thrust()
+        else:
+            self.v = self.v.norm(current_v)
+
+    def thrust(self, slowDown=False):
+        current_v = self.v.mod()
+        if (slowDown):
+            self.v = self.v.norm(current_v - 2.)
+        else:
+            self.v = self.v.norm(current_v + 2.)
+
+
 
     def pursuit(self):
         pass
@@ -152,14 +169,14 @@ class Cavallo():
         #    }
 
     def pathFollowing(self):
-        
         if (self.t.distance(self.p) <= 30.):
             self.currentNode += self.pathDir
             if (self.currentNode >= len(self.nodes) or self.currentNode < 0):
                 self.pathDir *= -1 
                 self.currentNode += self.pathDir
 
-            self.t = self.nodes[self.currentNode]
+            self.t = self.nodes[self.currentNode][0]
+            self.maxV = self.nodes[self.currentNode][1]
 
 class Obstacle():
     def __init__(self, pos=[-1, -1]):
@@ -176,10 +193,10 @@ o = Obstacle([230, 200])
 obstacles.append(o)
 
 
-targets = [(130,200),(320, 240), (300, 300), (200, 150)]
+targets = [(130,200, 50),(320, 240,30 ), (300, 300, 20), (200, 150, 50)]
 path = Path()
 for t in targets:
-    path.addNode(Vector(t))
+    path.addNode(Vector(t[0:2]), t[2])
 c = Cavallo([130,10], path, obstacles)
 
 pygame.init()
@@ -202,10 +219,10 @@ while(True):
     c.pathFollowing()
     c.steering()
     c.updatePosition(msElapsed/1000.)
-
+    
     pygame.draw.circle(screen, red, c.p.coord(), 5, 0)
     for t in targets:
-        pygame.draw.circle(screen, white, t, 2, 0)
+        pygame.draw.circle(screen, white, t[0:2], 2, 0)
     for o in obstacles:
         pygame.draw.circle(screen, blue, o.p.coord(), o.radius, 0)
 

@@ -168,9 +168,8 @@ def perpendicolare(p1, p2, delta1=10, delta2=-10, mq=False):
         
     return linea
         
-def coeffAngolare(points, interno):
+def coeffAngolare(points, interno, esterno):
     linee = []
-    #interni = []
     for i in xrange(len(points)-1):
         p2 = points[i+1]
         p1 = points[i]
@@ -181,8 +180,10 @@ def coeffAngolare(points, interno):
         print q1[0], q1[1],
         # m, q
         linee.append(perpendicolare(q1[0:2],q1[2:4],10))
-        #if (len(interno) != 0):
-        #    interni = retta(interno[i][0], interno[i][1], 10, True)
+        if (len(interno) != 0):
+            interni = retta(interno[i][0], interno[i][1], 10, True)
+        if (len(esterno) != 0):
+            esterni = retta(esterno[i][0], esterno[i][1], 10, True)
                 
         
     p2 = points[0]
@@ -191,8 +192,10 @@ def coeffAngolare(points, interno):
     q1 = retta(p1, p2, 20)
     print q1[0], q1[1],
     linee.append(perpendicolare(q1[0:2],q1[2:4],10))
-    #if (len(interno) != 0):
-    #    interni = retta(interno[len(points)-1][0], interno[len(points)-1][1], 10, True)
+    if (len(interno) != 0):
+        interni = retta(interno[len(points)-1][0], interno[len(points)-1][1], 10, True)
+    if (len(esterno) != 0):
+        esterni = retta(esterno[i][0], esterno[i][1], 10, True)
     return linee
 
 
@@ -211,9 +214,9 @@ def interno():
     
     for l in lines:
         items = l.split()
-        print items
         b.append(((float(items[0])-70)*1.08, (float(items[1])-30)*0.95))
     return b
+
 #6,4,3,2,3,2,3,7,2,6,1,,2,10,1,4,5,3,4
 def esterno():
     b = []
@@ -235,7 +238,6 @@ def bordiPiazza():
     f.close()
     
     for i in xrange(0, len(lines), 5):
-        print lines[i].split()[0]
         x = float(lines[i].split()[0])+30
         y = 1000-float(lines[i].split()[1])-50
         points.append((x, y))
@@ -246,18 +248,21 @@ esterno = esterno()
 interno = interno()
 bordi = bordiPiazza()
 
-#interno2 = [interno[0:2],interno[0:2],interno[1:3],interno[1:3],interno[1:3],interno[1:3],
-#            interno[2:4],interno[2:4],interno[2:4],interno[2:4],
-#            interno[3:5],interno[3:5],interno[4:6],interno[4:6],interno[4:6],
-#            interno[5:7],interno[5:7],interno[5:7],interno[5:7],interno[5:7],
-#            interno[6:8],interno[6:8],
-#            interno[7:9],interno[7:9],interno[7:9],interno[7:9],interno[7:9],interno[7:9],interno[7:9],
-#            interno[8:10],interno[8:10],interno[8:10],interno[8:10],interno[8:10],interno[8:10],interno[8:10],interno[8:10],interno[8:10],
-#            interno[9:11],interno[9:11],interno[9:11],interno[9:11],interno[10:12],
-#            interno[11:13],interno[11:13],interno[11:13],interno[11:13],interno[11:13],interno[11:13],interno[11:13],interno[11:13],
-#            interno[12:14],interno[12:14],interno[0:2]]
+a = [2,7,4,4,4,9,2,8,11,3,2,8,2,1,1,0,0]
+interno2 = []
+for j in xrange(len(interno)-1):
+    for i in xrange(a[j]):
+        interno2.append(interno[j:j+2])
 
-linee = coeffAngolare(bordi, interno)
+print len(esterno)
+a = [6,4,3,2,3,2,3,7,2,6,1,2,10,1,4,5,3,4,0,0]
+print len(a)
+esterno2 = []
+for j in xrange(len(esterno)-1):
+    for i in xrange(a[j]):
+        esterno2.append(esterno[j:j+2])
+
+linee = coeffAngolare(bordi, interno2, esterno2)
 #sys.exit()
 #path = Path()
 #for t in bordi:

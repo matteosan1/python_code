@@ -71,16 +71,26 @@ class Node():
         self.vmax = vd
 
 class Path():
-    def __init__(self, filename):
+    def __init__(self, filename=""):
         self.nodes = []
+        if (filename != ""):
+            self.add(filename)
 
+    def add(self, filename):
         f = open(filename)
         lines = f.readlines()
         f.close()
 
         for l in lines:
+            if ("#" in l):
+                continue
             items = l.split("\n")[0].split()
-            #fixme add velocity limit
-            n = Node(Vector([float(items[0]), float(items[1])]), Vector([float(items[2]), float(items[3])]), float(items[4]), float(items[5]))
+            n = Node(Vector([float(items[0]), float(items[1])]), Vector([float(items[2]), float(items[3])]), float(items[4]), float(items[5]), float(items[6]))
             self.nodes.append(n)
-  
+        
+class Obstacle():
+    def __init__(self, pos=[-1, -1]):
+        self.p = Vector(pos)
+        self.radius = 10
+        self.type = "block"
+
